@@ -3,463 +3,1130 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Vertex | Sites Profissionais que Geram Clientes</title>
-<meta name="description" content="Vertex cria sites profissionais para hotéis, restaurantes e empresas: design exclusivo, carregamento rápido e foco em conversão. Orçamento grátis pelo WhatsApp.">
+<title>Vertex | Criação de sites para restaurantes, hotéis e empresas — Curitiba</title>
+<meta name="description" content="Sites sob medida para restaurantes, hotéis e empresas. Design exclusivo, carregamento rápido e foco em conversão. Base em Curitiba, atendimento em todo o Brasil. Orçamento sem compromisso.">
+<link rel="canonical" href="https://vertexpage.com.br/">
+<meta name="theme-color" content="#0d0c0a">
+<meta name="author" content="Eduardo — Vertex">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Vertex">
+<meta property="og:url" content="https://vertexpage.com.br/">
+<meta property="og:title" content="Vertex | Sites que transformam visitas em clientes">
+<meta property="og:description" content="Sites sob medida para restaurantes, hotéis e empresas. Você fala direto com quem faz. Base em Curitiba, atendimento em todo o Brasil.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Vertex | Sites que transformam visitas em clientes">
+<meta name="twitter:description" content="Sites sob medida para restaurantes, hotéis e empresas. Você fala direto com quem faz.">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230d0c0a'/%3E%3Cpolygon points='17,16 48.2,45 48.2,83' fill='%23d9a441'/%3E%3Cpolygon points='83,16 51.8,45 51.8,83' fill='%23966e2e'/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230d0c0a'/%3E%3Cpolygon points='17,16 48.2,45 48.2,83' fill='%23d9a441'/%3E%3Cpolygon points='83,16 51.8,45 51.8,83' fill='%23966e2e'/%3E%3C/svg%3E">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
-html{scroll-behavior:smooth;scroll-padding-top:92px}
-body{margin:0;background:#07090f;color:#eef1f7;font-family:'Manrope',sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden;background-image:radial-gradient(ellipse at 15% 0%,rgba(63,111,214,0.09),transparent 55%),radial-gradient(ellipse at 85% 75%,rgba(99,102,241,0.05),transparent 55%)}
-a{color:#6ea8ff;text-decoration:none}
-a:hover{color:#9cc2ff}
-::-webkit-scrollbar{width:6px}
-::-webkit-scrollbar-track{background:#07090f}
-::-webkit-scrollbar-thumb{background:#1d2c4a;border-radius:8px}
-@keyframes vFloat{0%,100%{transform:translate(0,0)}25%{transform:translate(14px,-36px)}50%{transform:translate(-10px,-70px)}75%{transform:translate(-18px,-30px)}}
-@keyframes vPulse{0%{transform:scale(.8);opacity:1}100%{transform:scale(1.7);opacity:0}}
-@keyframes vGlow{0%,100%{transform:scale(1);opacity:.55}50%{transform:scale(1.22);opacity:1}}
-@keyframes vDot{0%,100%{box-shadow:0 0 0 0 rgba(52,199,123,.55)}50%{box-shadow:0 0 0 10px rgba(52,199,123,0)}}
-@keyframes vUp{from{opacity:0;transform:translateY(34px)}to{opacity:1;transform:none}}
-@keyframes vBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+/* ============================================================
+   TOKENS — único lugar onde cor, escala e tempo são definidos
+   ============================================================ */
+:root{
+  /* superfícies */
+  --bg:#0d0c0a;
+  --bg-raised:#151310;
+  --bg-raised-2:#1c1915;
+  --line:rgba(217,164,65,.14);
+  --line-hover:rgba(217,164,65,.38);
 
-/* responsive nav */
-.nav-burger{display:none}
-@media (max-width:879px){
-  .nav-links{display:none}
-  .nav-burger{display:block}
+  /* marca */
+  --brass:#d9a441;
+  --brass-bright:#e8b455;
+  --brass-shadow:#966e2e;
+
+  /* texto — todos verificados >= 4.5:1 sobre --bg */
+  --ink:#f7f4ef;        /* 18:1  */
+  --ink-soft:#c9c2b5;   /* 11:1  */
+  --ink-mute:#9a9285;   /* 6,4:1 */
+  --ink-faint:#8a8377;  /* 5,2:1 — piso; nada de texto abaixo disto */
+
+  --ok:#7fbf6a;
+
+  /* tipografia */
+  --font-display:'Fraunces',Georgia,serif;
+  --font-sans:'Inter',system-ui,-apple-system,sans-serif;
+  --step-h1:clamp(2.1rem,1.3rem + 3.6vw,3.6rem);
+  --step-h2:clamp(1.75rem,1.3rem + 2vw,2.7rem);
+  --step-h3:clamp(1.05rem,1rem + .3vw,1.2rem);
+  --step-lead:clamp(1rem,.96rem + .25vw,1.15rem);
+  --step-body:.94rem;
+  --step-small:.8rem;
+
+  /* espaço */
+  --gap:1.1rem;
+  --pad-x:clamp(1rem,4vw,2rem);
+  --pad-y:clamp(4rem,9vw,6.9rem);
+  --maxw:1180px;
+  --radius:14px;
+  --radius-lg:18px;
+
+  /* movimento — saída desacelerada, nunca linear nem ease genérico */
+  --ease-out:cubic-bezier(.22,.61,.36,1);
+  --ease-spring:cubic-bezier(.34,1.4,.64,1);
+  --t-fast:.18s;
+  --t:.32s;
+  --t-slow:.6s;
 }
-.mobile-menu{display:none}
-.mobile-menu.open{display:block}
 
-/* FAQ accordion (native details element) */
-.faq-item summary{cursor:pointer;list-style:none}
-.faq-item summary::-webkit-details-marker{display:none}
-.faq-item summary::marker{content:""}
-.faq-chevron{transition:transform .3s ease}
-.faq-item[open] .faq-chevron{transform:rotate(180deg)}
+/* ============================================================
+   BASE
+   ============================================================ */
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:92px;-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--bg);color:var(--ink-soft);
+  font-family:var(--font-sans);font-size:var(--step-body);line-height:1.65;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+h1,h2,h3{font-family:var(--font-display);color:var(--ink);font-weight:600;line-height:1.14;letter-spacing:-.015em;margin:0}
+p{margin:0}
+img,svg{max-width:100%}
+a{color:var(--brass);text-decoration:none;transition:color var(--t-fast) var(--ease-out)}
+a:hover{color:var(--brass-bright)}
+strong{color:var(--ink);font-weight:600}
 
-/* accessibility */
-a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid #6ea8ff;outline-offset:3px;border-radius:6px}
+::selection{background:var(--brass);color:var(--bg)}
+::-webkit-scrollbar{width:10px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:#2b251c;border-radius:8px;border:3px solid var(--bg)}
+::-webkit-scrollbar-thumb:hover{background:#3d3527}
+
+:focus-visible{outline:2px solid var(--brass);outline-offset:3px;border-radius:6px}
+
+.skip{position:absolute;left:-9999px;top:0;z-index:2000;background:var(--brass);color:var(--bg);
+  padding:12px 20px;border-radius:0 0 10px 0;font-weight:600;font-size:var(--step-small)}
+.skip:focus{left:0}
+
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;
+  clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* ============================================================
+   LAYOUT
+   ============================================================ */
+.section{max-width:var(--maxw);margin:0 auto;padding:var(--pad-y) var(--pad-x)}
+.section--narrow{max-width:830px}
+.grid{display:grid;gap:var(--gap)}
+.grid--2{grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr))}
+.grid--3{grid-template-columns:repeat(auto-fit,minmax(min(290px,100%),1fr))}
+.grid--4{grid-template-columns:repeat(auto-fit,minmax(min(230px,100%),1fr))}
+
+.eyebrow{display:inline-flex;align-items:center;gap:.65rem;font-size:.72rem;font-weight:600;
+  letter-spacing:.19em;text-transform:uppercase;color:var(--brass);margin-bottom:1rem}
+.eyebrow::before{content:"";width:18px;height:14px;flex:none;
+  background:var(--brass);
+  clip-path:polygon(0 0,46% 42%,46% 100%,54% 100%,54% 42%,100% 0,100% 14%,60% 48%,60% 100%,40% 100%,40% 48%,0 14%)}
+
+h1{font-size:var(--step-h1);letter-spacing:-.03em}
+h2{font-size:var(--step-h2);letter-spacing:-.025em}
+h3{font-size:var(--step-h3);letter-spacing:-.01em;font-weight:600}
+.accent{font-style:italic;color:var(--brass);font-weight:600}
+.lead{font-size:var(--step-lead);color:var(--ink-mute);line-height:1.7;max-width:56ch}
+.muted{color:var(--ink-mute)}
+.small{font-size:var(--step-small)}
+
+/* ============================================================
+   COMPONENTES
+   ============================================================ */
+.card{
+  background:var(--bg-raised);border:1px solid var(--line);border-radius:var(--radius-lg);
+  padding:1.7rem 1.5rem;
+  transition:border-color var(--t) var(--ease-out),transform var(--t) var(--ease-out),background var(--t) var(--ease-out);
+}
+.card:hover{border-color:var(--line-hover);transform:translateY(-4px);background:var(--bg-raised-2)}
+.card h3{margin:.85rem 0 .4rem}
+.card p{font-size:.9rem;color:var(--ink-mute);line-height:1.62}
+
+.card-icon{
+  width:44px;height:44px;border-radius:11px;display:flex;align-items:center;justify-content:center;
+  background:rgba(217,164,65,.1);color:var(--brass);border:1px solid var(--line);
+}
+.card-icon svg{width:20px;height:20px}
+
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.6rem;
+  padding:.9rem 1.7rem;border-radius:50px;font-family:var(--font-sans);
+  font-weight:600;font-size:.92rem;line-height:1;cursor:pointer;border:1.5px solid transparent;
+  transition:background var(--t) var(--ease-out),border-color var(--t) var(--ease-out),
+             transform var(--t-fast) var(--ease-out),box-shadow var(--t) var(--ease-out),color var(--t-fast) var(--ease-out);
+}
+.btn svg{width:18px;height:18px;flex:none}
+.btn--primary{background:var(--brass);color:#17130c;box-shadow:0 6px 26px rgba(217,164,65,.22)}
+.btn--primary:hover{background:var(--brass-bright);color:#17130c;transform:translateY(-2px);box-shadow:0 10px 34px rgba(217,164,65,.34)}
+.btn--primary:active{transform:translateY(0);box-shadow:0 3px 14px rgba(217,164,65,.28)}
+.btn--ghost{border-color:rgba(247,244,239,.22);color:var(--ink)}
+.btn--ghost:hover{border-color:var(--brass);color:var(--brass);transform:translateY(-2px)}
+.btn--ghost:active{transform:translateY(0)}
+.btn--sm{padding:.62rem 1.25rem;font-size:.82rem}
+.btn--block{width:100%}
+.btn[aria-disabled="true"]{opacity:.45;pointer-events:none}
+
+.chip{
+  display:inline-flex;align-items:center;gap:.5rem;background:var(--bg-raised);
+  border:1px solid var(--line);border-radius:50px;padding:.45rem 1rem;
+  font-size:.78rem;font-weight:500;color:var(--ink-soft);
+}
+.chip .dot{width:7px;height:7px;border-radius:50%;background:var(--ok);flex:none;animation:vDot 2.4s var(--ease-out) infinite}
+
+/* ============================================================
+   NAV
+   ============================================================ */
+.nav{position:fixed;inset:0 0 auto;z-index:1000;padding:.85rem var(--pad-x);
+  border-bottom:1px solid transparent;transition:background var(--t) var(--ease-out),border-color var(--t) var(--ease-out)}
+.nav.is-stuck{background:rgba(13,12,10,.88);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom-color:var(--line)}
+.nav__inner{max-width:var(--maxw);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.brand{display:inline-flex;align-items:center;gap:.6rem;color:var(--ink);min-height:44px;
+  font-family:var(--font-display);font-weight:700;font-size:1.25rem;letter-spacing:-.02em}
+.brand:hover{color:var(--ink)}
+.brand svg{width:26px;height:26px;flex:none}
+.nav__links{display:flex;align-items:center;gap:1.7rem}
+/* :not(.btn) é obrigatório — sem ele esta regra vence .btn--primary por
+   especificidade e apaga o texto do botão sobre o latão (contraste 1,37:1). */
+.nav__links a:not(.btn){color:var(--ink-mute);font-size:.85rem;font-weight:500}
+.nav__links a:not(.btn):hover{color:var(--ink)}
+.nav__burger{display:none;background:var(--bg-raised);border:1px solid var(--line);color:var(--ink);
+  padding:.6rem;border-radius:10px;cursor:pointer;line-height:0;
+  transition:border-color var(--t) var(--ease-out)}
+.nav__burger:hover{border-color:var(--line-hover)}
+.nav__burger svg{width:20px;height:20px}
+.nav__burger .icon-close{display:none}
+.nav__burger[aria-expanded="true"] .icon-close{display:block}
+.nav__burger[aria-expanded="true"] .icon-menu{display:none}
+
+.mobile-menu{display:none;position:absolute;top:100%;left:0;right:0;
+  background:rgba(13,12,10,.97);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);
+  border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;
+  gap:.2rem;padding:1.1rem var(--pad-x) 1.6rem}
+.mobile-menu.is-open{display:flex;animation:vUp .28s var(--ease-out)}
+.mobile-menu a:not(.btn){color:var(--ink-soft);font-size:1rem;font-weight:500;padding:.75rem .2rem;
+  border-bottom:1px solid var(--line)}
+.mobile-menu .btn{margin-top:.9rem}
+
+@media (max-width:899px){
+  .nav__links{display:none}
+  .nav__burger{display:block}
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden;
+  padding:8rem var(--pad-x) 4.5rem}
+.hero::after{content:"";position:absolute;inset:auto 0 0;height:180px;pointer-events:none;
+  background:linear-gradient(to bottom,transparent,var(--bg))}
+.hero__inner{max-width:var(--maxw);margin:0 auto;width:100%;display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(min(330px,100%),1fr));
+  gap:clamp(2rem,5vw,4rem);align-items:center;position:relative;z-index:2}
+.hero__copy{animation:vUp .7s var(--ease-out) both}
+.hero h1{margin:1.4rem 0 1.1rem;max-width:14ch}
+.hero .lead{margin-bottom:2rem;max-width:48ch}
+.hero__actions{display:flex;gap:.8rem;flex-wrap:wrap}
+.hero__trust{display:flex;gap:1.5rem;margin-top:2.3rem;flex-wrap:wrap;
+  font-size:var(--step-small);color:var(--ink-mute)}
+.hero__trust span{display:inline-flex;align-items:center;gap:.45rem}
+.hero__trust svg{width:15px;height:15px;color:var(--ok);flex:none}
+
+.hero__mark{position:relative;min-height:min(430px,62vw);display:flex;align-items:center;justify-content:center;
+  animation:vFade 1s var(--ease-out) .15s both}
+#markCanvas{display:block;width:100%;height:min(430px,62vw)}
+/* Sob movimento reduzido a marca não voa: aparece montada, com um fade curto. */
+#markCanvas.mark-fade{opacity:0;transition:opacity .55s var(--ease-out)}
+#markCanvas.mark-fade.is-in{opacity:1}
+.hero__mark-fallback{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+.hero__mark-fallback svg{width:min(240px,52%);height:auto}
+
+/* ============================================================
+   ESTUDOS (maquetes)
+   ============================================================ */
+.study{background:var(--bg-raised);border:1px solid var(--line);border-radius:var(--radius-lg);
+  overflow:hidden;transition:border-color var(--t) var(--ease-out),transform var(--t) var(--ease-out)}
+.study:hover{border-color:var(--line-hover);transform:translateY(-5px)}
+.study__stage{aspect-ratio:16/11;display:flex;align-items:flex-end;justify-content:center;
+  overflow:hidden;padding:1.4rem 1.4rem 0}
+.study__mock{width:100%;border-radius:8px 8px 0 0;overflow:hidden;
+  box-shadow:0 -6px 40px rgba(0,0,0,.5);transition:transform var(--t-slow) var(--ease-out)}
+.study:hover .study__mock{transform:translateY(-6px)}
+.study__mock-bar{display:flex;justify-content:space-between;align-items:center;padding:.55rem .75rem}
+.study__mock-hero{height:88px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.3rem}
+.study__mock-row{display:flex;gap:.45rem;padding:.5rem .65rem .75rem}
+.study__mock-row span{flex:1;height:30px;border-radius:4px;display:flex;align-items:center;justify-content:center}
+.study__body{padding:1.25rem 1.4rem 1.4rem}
+.study__tag{font-size:.68rem;color:var(--brass);font-weight:600;text-transform:uppercase;letter-spacing:.14em}
+.study__body h3{margin:.35rem 0 .4rem}
+.study__body p{font-size:.9rem;color:var(--ink-mute);line-height:1.62}
+.pill{font-size:.4rem;font-weight:700;padding:.22rem .55rem;border-radius:20px;letter-spacing:.06em}
+
+/* ============================================================
+   QUALIFICADOR
+   ============================================================ */
+.qz{background:var(--bg-raised);border:1px solid var(--line);border-radius:var(--radius-lg);
+  padding:clamp(1.4rem,3.5vw,2.4rem)}
+.qz__step+.qz__step{margin-top:1.7rem}
+.qz__q{font-size:.82rem;font-weight:600;color:var(--ink);margin-bottom:.75rem;display:block}
+.qz__q .qz__hint{font-weight:400;color:var(--ink-mute);font-size:.76rem}
+.qz__opts{display:flex;flex-wrap:wrap;gap:.5rem;border:0;padding:0;margin:0}
+.qz__opt{position:relative}
+.qz__opt input{position:absolute;opacity:0;width:100%;height:100%;margin:0;cursor:pointer;left:0;top:0}
+.qz__opt span{display:inline-flex;align-items:center;gap:.45rem;padding:.6rem 1.05rem;border-radius:50px;
+  border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);font-size:.83rem;font-weight:500;
+  transition:border-color var(--t-fast) var(--ease-out),background var(--t-fast) var(--ease-out),color var(--t-fast) var(--ease-out)}
+.qz__opt:hover span{border-color:var(--line-hover);color:var(--ink)}
+.qz__opt input:checked+span{background:var(--brass);border-color:var(--brass);color:#17130c;font-weight:600}
+.qz__opt input:focus-visible+span{outline:2px solid var(--brass);outline-offset:3px}
+.qz__out{margin-top:1.8rem;padding-top:1.5rem;border-top:1px solid var(--line)}
+.qz__preview{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:.9rem 1.05rem;
+  font-size:.84rem;color:var(--ink-soft);line-height:1.6;margin-bottom:1.1rem;min-height:3.2rem}
+.qz__preview em{color:var(--ink-mute);font-style:normal}
+.qz__empty{color:var(--ink-mute)}
+
+/* ============================================================
+   FAQ
+   ============================================================ */
+.faq{display:flex;flex-direction:column;gap:.7rem}
+.faq details{background:var(--bg-raised);border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;transition:border-color var(--t) var(--ease-out)}
+.faq details:hover{border-color:var(--line-hover)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;
+  gap:1rem;padding:1.15rem 1.3rem;font-weight:600;font-size:.95rem;color:var(--ink);font-family:var(--font-sans)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::marker{content:""}
+.faq summary svg{width:16px;height:16px;color:var(--brass);flex:none;transition:transform var(--t) var(--ease-out)}
+.faq details[open] summary svg{transform:rotate(180deg)}
+.faq p{padding:0 1.3rem 1.2rem;color:var(--ink-mute);font-size:.88rem;line-height:1.72}
+
+/* ============================================================
+   CTA + RODAPÉ
+   ============================================================ */
+.cta{text-align:center;padding:var(--pad-y) var(--pad-x);position:relative;overflow:hidden}
+.cta__glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:min(620px,110vw);
+  aspect-ratio:1;background:radial-gradient(circle,rgba(217,164,65,.1),transparent 66%);
+  border-radius:50%;pointer-events:none}
+.cta__inner{max-width:640px;margin:0 auto;position:relative;z-index:2}
+.cta h2{margin-bottom:.9rem}
+.cta .lead{margin:0 auto 2rem}
+
+.footer{border-top:1px solid var(--line);max-width:var(--maxw);margin:0 auto;
+  padding:2.4rem var(--pad-x);display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:1.2rem}
+.footer__links{display:flex;gap:.4rem 1rem;flex-wrap:wrap}
+/* min-height 44px: alvo de toque confortável no celular (WCAG 2.5.5) */
+.footer__links a{color:var(--ink-mute);font-size:.83rem;display:inline-flex;align-items:center;
+  gap:.45rem;min-height:44px;padding:0 .35rem}
+.footer__links a:hover{color:var(--brass)}
+.footer__links svg{width:15px;height:15px}
+.footer__legal{width:100%;text-align:center;font-size:.75rem;color:var(--ink-faint);line-height:1.7}
+
+.wa-float{position:fixed;bottom:1.5rem;right:1.5rem;z-index:999;width:56px;height:56px;
+  background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  color:#fff;box-shadow:0 8px 28px rgba(37,211,102,.4);
+  transition:transform var(--t) var(--ease-spring),box-shadow var(--t) var(--ease-out)}
+.wa-float:hover{transform:scale(1.09);color:#fff;box-shadow:0 12px 36px rgba(37,211,102,.55)}
+.wa-float:active{transform:scale(1.02)}
+.wa-float svg{width:27px;height:27px}
+.wa-float__ring{position:absolute;inset:-8px;border-radius:50%;border:2px solid rgba(37,211,102,.45);
+  animation:vPulse 2.4s var(--ease-out) infinite;pointer-events:none}
+
+/* ============================================================
+   MOVIMENTO
+   ============================================================ */
+@keyframes vUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+@keyframes vFade{from{opacity:0}to{opacity:1}}
+@keyframes vDot{0%,100%{box-shadow:0 0 0 0 rgba(127,191,106,.5)}50%{box-shadow:0 0 0 9px rgba(127,191,106,0)}}
+@keyframes vPulse{0%{transform:scale(.85);opacity:1}100%{transform:scale(1.55);opacity:0}}
+
+[data-reveal]{opacity:0;transform:translateY(26px)}
+[data-reveal].is-in{opacity:1;transform:none;
+  transition:opacity var(--t-slow) var(--ease-out),transform var(--t-slow) var(--ease-out)}
+.no-js [data-reveal]{opacity:1;transform:none}
+
 @media (prefers-reduced-motion:reduce){
-  *{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important}
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;
+    transition-duration:.001ms !important}
+  [data-reveal]{opacity:1;transform:none}
+  .card:hover,.study:hover,.btn:hover,.wa-float:hover{transform:none}
+  /* Exceção deliberada à regra acima. O que desencadeia enjoo e vertigem é
+     deslocamento amplo na tela, não variação de opacidade — então a marca
+     ganha um surgimento suave em vez de aparecer como imagem morta. */
+  #markCanvas.mark-fade{transition-duration:.55s !important}
 }
-
-.hov1:hover{color:#ffffff}
-.hov2:hover{color:#ffffff}
-.hov3:hover{color:#ffffff}
-.hov4:hover{color:#ffffff}
-.hov5:hover{color:#ffffff}
-.hov6:hover{transform:translateY(-2px);box-shadow:0 0 34px rgba(90,130,255,0.55);color:#fff}
-.hov7:hover{transform:translateY(-3px);box-shadow:0 14px 44px rgba(90,130,255,0.55);color:#fff}
-.hov8:hover{border-color:#4f8ef7;background:rgba(63,111,228,0.08);transform:translateY(-3px);color:#ffffff}
-.hov9:hover{border-color:rgba(111,155,255,0.45);transform:translateY(-4px)}
-.hov10:hover{border-color:rgba(111,155,255,0.45);transform:translateY(-4px)}
-.hov11:hover{border-color:rgba(111,155,255,0.45);transform:translateY(-4px)}
-.hov12:hover{border-color:rgba(111,155,255,0.45);transform:translateY(-4px)}
-.hov13:hover{border-color:rgba(111,155,255,0.45);transform:translateY(-4px)}
-.hov14:hover{border-color:rgba(111,155,255,0.45);transform:translateY(-4px)}
-.hov15:hover{border-color:rgba(111,155,255,0.5);transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,0,0,0.4)}
-.hov16:hover{border-color:rgba(111,155,255,0.5);transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,0,0,0.4)}
-.hov17:hover{border-color:rgba(111,155,255,0.5);transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,0,0,0.4)}
-.hov18:hover{border-color:rgba(111,155,255,0.5);transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,0,0,0.4)}
-.hov19:hover{border-color:rgba(111,155,255,0.5);transform:translateY(-6px)}
-.hov20:hover{border-color:rgba(111,155,255,0.5);transform:translateY(-6px)}
-.hov21:hover{border-color:rgba(111,155,255,0.5);transform:translateY(-6px)}
-.hov22:hover{border-color:rgba(111,155,255,0.5);transform:translateY(-6px)}
-.hov23:hover{border-color:rgba(111,155,255,0.5);transform:translateY(-6px);box-shadow:0 24px 60px rgba(0,0,0,0.45)}
-.hov24:hover{transform:translateY(-4px)}
-.hov25:hover{border-color:rgba(111,155,255,0.5);transform:translateY(-6px);box-shadow:0 24px 60px rgba(0,0,0,0.45)}
-.hov26:hover{transform:translateY(-4px)}
-.hov27:hover{border-color:rgba(111,155,255,0.5);transform:translateY(-6px);box-shadow:0 24px 60px rgba(0,0,0,0.45)}
-.hov28:hover{transform:translateY(-4px)}
-.hov29:hover{border-color:rgba(111,155,255,0.45);transform:translateY(-4px)}
-.hov30:hover{border-color:rgba(111,155,255,0.45);transform:translateY(-4px)}
-.hov31:hover{border-color:rgba(111,155,255,0.45);transform:translateY(-4px)}
-.hov32:hover{transform:translateY(-3px);box-shadow:0 16px 50px rgba(90,130,255,0.6);color:#fff}
-.hov33:hover{color:#9cc2ff}
-.hov34:hover{color:#9cc2ff}
-.hov35:hover{color:#9cc2ff}
-.hov36:hover{transform:scale(1.1);box-shadow:0 12px 40px rgba(37,211,102,0.6);color:#fff}
 </style>
-</head>
-<body>
 
-<nav id="siteNav" style="position:fixed;top:0;left:0;right:0;z-index:1000;padding:14px clamp(16px,4vw,32px);border-bottom:1px solid transparent;transition:all .4s ease">
-  <div style="max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px">
-    <a href="#hero" style="display:flex;align-items:center;gap:11px;color:#f2f5fb;font-family:'Sora',sans-serif;font-weight:800;font-size:21px;letter-spacing:-0.5px">
-      
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"ProfessionalService",
+      "@id":"https://vertexpage.com.br/#business",
+      "name":"Vertex",
+      "description":"Criação de sites sob medida para restaurantes, hotéis e empresas, com foco em design exclusivo, velocidade e conversão.",
+      "url":"https://vertexpage.com.br/",
+      "telephone":"+5541997411544",
+      "email":"Vertex.page@outlook.com",
+      "founder":[{"@type":"Person","name":"Eduardo"},{"@type":"Person","name":"Nicoly"}],
+      "address":{"@type":"PostalAddress","addressLocality":"Curitiba","addressRegion":"PR","addressCountry":"BR"},
+      "areaServed":[{"@type":"City","name":"Curitiba"},{"@type":"Country","name":"Brasil"}],
+      "sameAs":["https://instagram.com/Vertexpage"],
+      "knowsLanguage":"pt-BR"
+    },
+    {
+      "@type":"FAQPage",
+      "@id":"https://vertexpage.com.br/#faq",
+      "mainEntity":[
+        {"@type":"Question","name":"Quanto custa um site?","acceptedAnswer":{"@type":"Answer","text":"Cada projeto é orçado individualmente, porque o valor depende do escopo e do tempo envolvido. O que mais pesa: número de páginas, se precisa de cardápio digital, reserva ou pedido online, se o conteúdo e as fotos já existem ou precisam ser produzidos, e se há integração com algum sistema que você já usa. Monte seu escopo aqui no site e respondemos com um valor fechado, sem compromisso."}},
+        {"@type":"Question","name":"O que está incluso em todo projeto?","acceptedAnswer":{"@type":"Answer","text":"Registro do domínio, hospedagem, certificado de segurança HTTPS, versão para celular, otimização para buscadores e um período de ajustes após a entrega. Você recebe o site pronto e no ar, sem precisar contratar nada à parte."}},
+        {"@type":"Question","name":"O domínio fica no meu nome?","acceptedAnswer":{"@type":"Answer","text":"Sim. O domínio é registrado no seu nome ou no CNPJ da sua empresa, e você recebe todos os acessos. Se um dia quiser levar o site para outro fornecedor, ele é seu e vai com você. Você não fica preso a nós — e desconfie de quem não fizer assim."}},
+        {"@type":"Question","name":"E se eu não gostar do layout?","acceptedAnswer":{"@type":"Answer","text":"Você aprova o layout antes de partirmos para o desenvolvimento, e temos rodadas de ajuste até chegar no ponto. Ninguém desenvolve um site inteiro para o cliente descobrir no fim que não era aquilo."}},
+        {"@type":"Question","name":"Quanto tempo leva?","acceptedAnswer":{"@type":"Answer","text":"Até 8 dias na maioria dos projetos, e landing pages costumam ficar prontas antes disso. O prazo exato é definido junto com o orçamento, por escrito, antes de começar. Um detalhe para ser justo com os dois lados: a contagem começa quando recebemos os textos, as fotos e as informações do seu negócio. Se esse material demorar, o prazo acompanha — e se você não tiver o conteúdo pronto, a gente ajuda a resolver isso também."}},
+        {"@type":"Question","name":"Quem atualiza o site depois que ele está no ar?","acceptedAnswer":{"@type":"Answer","text":"Você escolhe. Podemos cuidar das atualizações em um plano de manutenção, ou deixar o site preparado para você mesmo alterar textos, fotos e cardápio. Explicamos as duas opções no orçamento para você decidir com clareza."}}
+      ]
+    }
+  ]
+}
+</script>
+</head>
+
+<body class="no-js">
+
+<a class="skip" href="#main">Pular para o conteúdo</a>
+
+<!-- Sprite de ícones: um só lugar, referenciado por <use>. Substitui o Font Awesome. -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0 0 20.465 3.488"/>
+    </symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0m0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07s-3.586-.015-4.859-.074c-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844s.016-3.586.061-4.861c.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06zm0 3.678a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324M12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8m7.846-10.405a1.441 1.441 0 0 1-2.88 0 1.44 1.44 0 0 1 2.88 0"/>
+    </symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+    </symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+    <symbol id="i-arrow-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M19 12l-7 7-7-7"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></symbol>
+    <symbol id="i-gauge" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+    <symbol id="i-zap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></symbol>
+    <symbol id="i-building" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18M10 6h4M10 10h4M10 14h4M10 18h4M2 22h20"/></symbol>
+    <symbol id="i-brush" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m9.06 11.9 8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08"/><path d="M7.07 14.94c-1.66 0-3 1.35-3 3.02 0 1.33-2.5 1.52-2 2.02 1.08 1.1 2.49 2.02 4 2.02 2.2 0 4-1.8 4-4.04a3.01 3.01 0 0 0-3-3.02"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2.06 12.35a1 1 0 0 1 0-.7 10.75 10.75 0 0 1 19.88 0 1 1 0 0 1 0 .7 10.75 10.75 0 0 1-19.88 0"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-key" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m15.5 7.5 2.3 2.3a1 1 0 0 0 1.4 0l2.1-2.1a1 1 0 0 0 0-1.4L19 4M2 22l4-4"/><circle cx="10.5" cy="13.5" r="4.5"/></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+    <symbol id="i-truck" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2M15 18H9M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.62l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></symbol>
+    <symbol id="i-box" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5M12 22V12"/></symbol>
+    <symbol id="i-route" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="19" r="2"/><circle cx="18" cy="5" r="2"/><path d="M16 7v1a2 2 0 0 1-2 2H8a2 2 0 0 0-2 2v3"/></symbol>
+    <symbol id="i-mark" viewBox="0 0 100 100">
+      <polygon points="17,16 48.2,45 48.2,83" fill="var(--brass,#d9a441)"/>
+      <polygon points="83,16 51.8,45 51.8,83" fill="var(--brass-shadow,#966e2e)"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- ============================================================ NAV -->
+<nav class="nav" id="siteNav">
+  <div class="nav__inner">
+    <a href="#hero" class="brand" aria-label="Vertex — início">
+      <svg aria-hidden="true"><use href="#i-mark"/></svg>
       Vertex
     </a>
-    <div class="nav-links">
-      <div style="display:flex;align-items:center;gap:30px">
-        <a href="#sobre" class="hov1" style="color:#aeb7c9;font-size:14px;font-weight:600">Sobre</a>
-        <a href="#servicos" class="hov2" style="color:#aeb7c9;font-size:14px;font-weight:600">Serviços</a>
-        <a href="#processo" class="hov3" style="color:#aeb7c9;font-size:14px;font-weight:600">Processo</a>
-        <a href="#portfolio" class="hov4" style="color:#aeb7c9;font-size:14px;font-weight:600">Portfólio</a>
-        <a href="#faq" class="hov5" style="color:#aeb7c9;font-size:14px;font-weight:600">FAQ</a>
-        <a href="https://wa.me/5541997411544?text=Ol%C3%A1%20Vertex%21%20Quero%20saber%20mais%20sobre%20a%20cria%C3%A7%C3%A3o%20de%20sites." target="_blank" rel="noopener" class="hov6" style="background:linear-gradient(135deg,#2f6fe4,#5b5ff0);color:#fff;padding:10px 22px;border-radius:50px;font-size:14px;font-weight:700;box-shadow:0 0 24px rgba(63,111,228,0.35);transition:all .3s"><i class="fa-brands fa-whatsapp" style="margin-right:7px"></i>Falar no WhatsApp</a>
-      </div>
+    <div class="nav__links">
+      <a href="#sobre">Quem faz</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#processo">Processo</a>
+      <a href="#estudos">Estudos</a>
+      <a href="#faq">Dúvidas</a>
+      <a href="#orcamento" class="btn btn--primary btn--sm">Montar orçamento</a>
     </div>
-    <div class="nav-burger">
-      <button id="menuToggle" aria-label="Menu" style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);color:#fff;font-size:19px;cursor:pointer;padding:10px 14px;border-radius:10px">
-        <i class="fa-solid fa-bars"></i>
-      </button>
-    </div>
+    <button class="nav__burger" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
+      <svg class="icon-menu" aria-hidden="true"><use href="#i-menu"/></svg>
+      <svg class="icon-close" aria-hidden="true"><use href="#i-close"/></svg>
+    </button>
   </div>
   <div class="mobile-menu" id="mobileMenu">
-    <div style="position:absolute;top:100%;left:0;right:0;background:rgba(8,10,18,0.97);backdrop-filter:blur(24px);border-bottom:1px solid rgba(255,255,255,0.08);display:flex;flex-direction:column;align-items:center;gap:22px;padding:30px 24px;animation:vUp .3s ease">
-      <a href="#sobre" class="mobile-menu-link" style="color:#dbe2ef;font-size:16px;font-weight:600">Sobre</a>
-      <a href="#servicos" class="mobile-menu-link" style="color:#dbe2ef;font-size:16px;font-weight:600">Serviços</a>
-      <a href="#processo" class="mobile-menu-link" style="color:#dbe2ef;font-size:16px;font-weight:600">Processo</a>
-      <a href="#portfolio" class="mobile-menu-link" style="color:#dbe2ef;font-size:16px;font-weight:600">Portfólio</a>
-      <a href="#faq" class="mobile-menu-link" style="color:#dbe2ef;font-size:16px;font-weight:600">FAQ</a>
-      <a href="https://wa.me/5541997411544?text=Ol%C3%A1%20Vertex%21%20Quero%20saber%20mais%20sobre%20a%20cria%C3%A7%C3%A3o%20de%20sites." target="_blank" rel="noopener" class="mobile-menu-link" style="background:linear-gradient(135deg,#2f6fe4,#5b5ff0);color:#fff;padding:13px 30px;border-radius:50px;font-size:15px;font-weight:700"><i class="fa-brands fa-whatsapp" style="margin-right:8px"></i>Falar no WhatsApp</a>
-    </div>
+    <a href="#sobre">Quem faz</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#processo">Processo</a>
+    <a href="#estudos">Estudos</a>
+    <a href="#faq">Dúvidas</a>
+    <a href="#orcamento" class="btn btn--primary">Montar orçamento</a>
   </div>
 </nav>
 
-<section id="hero" style="min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:130px clamp(16px,4vw,32px) 80px;background:linear-gradient(165deg,#080a14 0%,#0b1122 45%,#0d1526 70%,#070a13 100%)">
-  <div id="particles" aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;z-index:1"></div>
-  <div aria-hidden="true" style="position:absolute;top:-18%;right:-8%;width:560px;height:560px;background:radial-gradient(circle,rgba(63,111,228,0.13),transparent 68%);border-radius:50%;animation:vGlow 9s ease-in-out infinite;pointer-events:none"></div>
-  <div aria-hidden="true" style="position:absolute;bottom:-14%;left:-6%;width:480px;height:480px;background:radial-gradient(circle,rgba(99,102,241,0.1),transparent 68%);border-radius:50%;animation:vGlow 11s ease-in-out 2s infinite;pointer-events:none"></div>
+<main id="main">
 
-  
-    <div style="max-width:1180px;margin:0 auto;width:100%;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(36px,5vw,70px);align-items:center;position:relative;z-index:2">
-      <div style="animation:vUp .8s ease-out both">
-        <span style="display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:50px;padding:8px 17px;font-size:12.5px;font-weight:600;color:#c3cbdb;margin-bottom:26px;backdrop-filter:blur(10px)">
-          <span style="width:8px;height:8px;background:#34c77b;border-radius:50%;animation:vDot 2s ease-in-out infinite"></span>
-          Respondemos em minutos no WhatsApp
-        </span>
-        <h1 style="font-family:'Sora',sans-serif;font-size:clamp(34px,4.6vw,58px);font-weight:800;letter-spacing:-1.8px;line-height:1.07;margin:0 0 20px;color:#f4f7fd">Sites que transformam visitas em <span style="background:linear-gradient(120deg,#5b9bff,#7b6bf5 70%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">clientes</span></h1>
-        <p style="font-size:clamp(16px,1.4vw,19px);color:#94a0b5;margin:0 0 34px;max-width:470px;line-height:1.65">Design sob medida para hotéis, restaurantes e empresas que querem crescer. Estratégia, performance e conversão — do briefing ao lançamento.</p>
-        <div style="display:flex;gap:14px;flex-wrap:wrap">
-          <a href="https://wa.me/5541997411544?text=Ol%C3%A1%20Vertex%21%20Quero%20saber%20mais%20sobre%20a%20cria%C3%A7%C3%A3o%20de%20sites." target="_blank" rel="noopener" class="hov7" style="display:inline-flex;align-items:center;gap:10px;padding:15px 30px;border-radius:50px;font-weight:700;font-size:15.5px;background:linear-gradient(135deg,#2f6fe4,#5b5ff0);color:#fff;box-shadow:0 8px 34px rgba(63,111,228,0.4);transition:all .3s"><i class="fa-brands fa-whatsapp" style="font-size:18px"></i>Pedir orçamento grátis</a>
-          <a href="#portfolio" class="hov8" style="display:inline-flex;align-items:center;gap:10px;padding:15px 28px;border-radius:50px;font-weight:700;font-size:15.5px;color:#e8edf6;border:1.5px solid rgba(255,255,255,0.22);transition:all .3s"><i class="fa-solid fa-arrow-down" style="font-size:13px"></i>Ver projetos</a>
-        </div>
-        <div style="display:flex;gap:26px;margin-top:38px;flex-wrap:wrap">
-          <span style="font-size:13.5px;color:#7e8aa0;display:flex;align-items:center;gap:8px"><i class="fa-solid fa-circle-check" style="color:#34c77b"></i>150+ projetos entregues</span>
-          <span style="font-size:13.5px;color:#7e8aa0;display:flex;align-items:center;gap:8px"><i class="fa-solid fa-circle-check" style="color:#34c77b"></i>Entrega em até 14 dias</span>
-        </div>
+<!-- ============================================================ HERO -->
+<section class="hero" id="hero">
+  <div class="hero__inner">
+    <div class="hero__copy">
+      <span class="chip"><span class="dot" aria-hidden="true"></span>Respondemos em minutos no WhatsApp</span>
+      <h1>Sites que transformam visitas em <span class="accent">clientes</span></h1>
+      <p class="lead">Somos dois: a Nicoly cuida do design e das animações, o Eduardo do desenvolvimento. Criamos sites sob medida para restaurantes, hotéis e empresas — base em Curitiba, atendendo o Brasil inteiro. Do briefing ao lançamento você fala com a gente, não com um atendente.</p>
+      <div class="hero__actions">
+        <a href="#orcamento" class="btn btn--primary">Montar meu orçamento</a>
+        <a href="#estudos" class="btn btn--ghost"><svg aria-hidden="true"><use href="#i-arrow-down"/></svg>Ver estudos</a>
       </div>
-      <div style="position:relative;animation:vUp .8s ease-out .2s both;min-height:380px;display:flex;align-items:center;justify-content:center">
-        <div style="position:relative;width:min(440px,100%);aspect-ratio:4/3.4">
-          <div style="position:absolute;top:0;left:0;width:78%;transform:rotate(-4deg);border-radius:12px;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,0.55);border:1px solid rgba(255,255,255,0.12);animation:vBob 7s ease-in-out infinite">
-            <div style="height:22px;background:#1a2540;display:flex;align-items:center;gap:5px;padding:0 10px"><span style="width:7px;height:7px;border-radius:50%;background:#ef4444"></span><span style="width:7px;height:7px;border-radius:50%;background:#f59e0b"></span><span style="width:7px;height:7px;border-radius:50%;background:#22c55e"></span></div>
-            <div style="background:#f6f1e6;padding:10px 12px 14px">
-              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:9px"><span style="font-family:Georgia,serif;font-size:10px;font-weight:700;color:#2f4a3a;font-style:italic">La Dolce Vita Park</span><span style="background:#b98d4f;color:#fff;font-size:6.5px;font-weight:700;padding:3px 8px;border-radius:20px">RESERVAR</span></div>
-              <div style="height:74px;border-radius:6px;background:linear-gradient(140deg,#3d5c48,#243b2d 60%,#1b2c22);display:flex;align-items:center;justify-content:center;margin-bottom:8px"><span style="font-family:Georgia,serif;color:#f2ead8;font-size:11px;font-style:italic;text-align:center;line-height:1.4">Um refúgio de requinte<br>na natureza</span></div>
-              <div style="display:flex;gap:6px"><span style="flex:1;height:26px;border-radius:4px;background:linear-gradient(135deg,#57755f,#3a5344)"></span><span style="flex:1;height:26px;border-radius:4px;background:linear-gradient(135deg,#8a6a3e,#6b5231)"></span><span style="flex:1;height:26px;border-radius:4px;background:linear-gradient(135deg,#44604e,#2c4436)"></span></div>
-            </div>
-          </div>
-          <div style="position:absolute;bottom:0;right:0;width:78%;transform:rotate(3.5deg);border-radius:12px;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,0.6);border:1px solid rgba(255,255,255,0.12);animation:vBob 8s ease-in-out 1.2s infinite">
-            <div style="height:22px;background:#1a2540;display:flex;align-items:center;gap:5px;padding:0 10px"><span style="width:7px;height:7px;border-radius:50%;background:#ef4444"></span><span style="width:7px;height:7px;border-radius:50%;background:#f59e0b"></span><span style="width:7px;height:7px;border-radius:50%;background:#22c55e"></span></div>
-            <div style="background:#16100b;padding:10px 12px 14px">
-              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:9px"><span style="font-family:Georgia,serif;font-size:10px;font-weight:700;color:#e8dcc8">Borda &amp; Lenha</span><span style="background:#e2762d;color:#fff;font-size:6.5px;font-weight:700;padding:3px 8px;border-radius:20px">PEDIR AGORA</span></div>
-              <div style="height:74px;border-radius:6px;background:radial-gradient(circle at 30% 60%,#7a3d14,#3a1e0c 65%);display:flex;align-items:center;justify-content:center;margin-bottom:8px"><span style="font-family:Georgia,serif;color:#f6e8d4;font-size:11.5px;text-align:center;line-height:1.4">Sabor que nasce<br>do fogo</span></div>
-              <div style="display:flex;gap:6px"><span style="flex:1;height:26px;border-radius:4px;background:linear-gradient(135deg,#5c2f14,#3d200e)"></span><span style="flex:1;height:26px;border-radius:4px;background:linear-gradient(135deg,#84431a,#55290e)"></span><span style="flex:1;height:26px;border-radius:4px;background:linear-gradient(135deg,#4a2812,#301a0a)"></span></div>
-            </div>
-          </div>
-          <span style="position:absolute;top:44%;right:-4px;background:rgba(10,14,26,0.9);border:1px solid rgba(90,130,255,0.4);color:#9cc2ff;font-size:11.5px;font-weight:700;padding:7px 14px;border-radius:50px;backdrop-filter:blur(8px);box-shadow:0 8px 24px rgba(0,0,0,0.4)"><i class="fa-solid fa-bolt" style="margin-right:6px;color:#5b9bff"></i>Projetos reais</span>
-        </div>
+      <div class="hero__trust">
+        <span><svg aria-hidden="true"><use href="#i-check"/></svg>Entrega em até 8 dias</span>
+        <span><svg aria-hidden="true"><use href="#i-check"/></svg>Domínio e hospedagem inclusos</span>
       </div>
     </div>
-  
+    <div class="hero__mark">
+      <canvas id="markCanvas" aria-hidden="true"></canvas>
+      <div class="hero__mark-fallback" id="markFallback" hidden>
+        <svg viewBox="0 0 100 100" role="img" aria-label="Marca da Vertex: um V formado por duas faces que se encontram numa aresta central"><use href="#i-mark"/></svg>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section id="sobre" data-reveal="true" style="max-width:1180px;margin:0 auto;padding:clamp(64px,9vw,110px) clamp(16px,4vw,32px)">
-  <span style="display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#6ea8ff;margin-bottom:16px"><span style="width:22px;height:2px;background:#4f8ef7;border-radius:2px"></span>Quem somos</span>
-  <h2 style="font-family:'Sora',sans-serif;font-size:clamp(28px,3.4vw,44px);font-weight:700;letter-spacing:-1.2px;line-height:1.15;color:#f2f5fb;margin:0 0 40px;max-width:640px">Design que impulsiona negócios de verdade</h2>
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(32px,5vw,64px);align-items:center">
+<!-- ============================================================ SOBRE -->
+<section class="section" id="sobre" data-reveal>
+  <span class="eyebrow">Quem faz o seu site</span>
+  <h2>Você fala direto com quem desenha e escreve o código</h2>
+  <div class="grid grid--2" style="margin-top:2.5rem;align-items:start">
     <div>
-      <p style="color:#94a0b5;font-size:16.5px;line-height:1.8;margin:0 0 16px">Somos um estúdio de design digital focado em <strong style="color:#dbe2ef">resultados</strong>. Unimos criatividade, tecnologia e estratégia para criar sites que não apenas impressionam — eles geram clientes todos os dias.</p>
-      <p style="color:#94a0b5;font-size:16.5px;line-height:1.8;margin:0 0 30px">Atendemos <strong style="color:#dbe2ef">hotéis, restaurantes e empresas</strong> que precisam de uma presença online profissional, rápida e que converte visitantes em clientes fiéis.</p>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:16px">
-        <div class="hov9" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:22px;text-align:center;transition:all .3s">
-          <div style="font-family:'Sora',sans-serif;font-size:clamp(30px,3vw,40px);font-weight:800;background:linear-gradient(120deg,#5b9bff,#7b6bf5);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:-1px">150+</div>
-          <div style="font-size:13.5px;color:#aeb7c9;margin-top:2px">Projetos entregues</div>
+      <p class="lead" style="margin-bottom:1rem">Sem camada de atendimento, sem briefing que se perde no caminho, sem "vou verificar com a equipe". Você explica o negócio para nós dois: a <strong>Nicoly</strong> desenha o layout e cria as animações, o <strong>Eduardo</strong> desenvolve e coloca no ar. E continuamos sendo as mesmas duas pessoas quando você precisar de algo depois.</p>
+      <p class="lead" style="margin-bottom:1.7rem">Trabalhamos principalmente com <strong>restaurantes, hotéis e empresas</strong> que precisam de uma presença online que não pareça improvisada. Estamos em Curitiba, mas o trabalho é remoto e atendemos qualquer lugar do Brasil.</p>
+      <div class="grid grid--2">
+        <div class="card">
+          <div class="card-icon"><svg aria-hidden="true"><use href="#i-users"/></svg></div>
+          <h3>Só nós dois</h3>
+          <p>Do primeiro contato ao suporte pós-lançamento, sempre as mesmas pessoas.</p>
         </div>
-        <div class="hov10" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:22px;text-align:center;transition:all .3s">
-          <div style="font-family:'Sora',sans-serif;font-size:clamp(30px,3vw,40px);font-weight:800;background:linear-gradient(120deg,#5b9bff,#7b6bf5);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:-1px">98%</div>
-          <div style="font-size:13.5px;color:#aeb7c9;margin-top:2px">Clientes satisfeitos</div>
+        <div class="card">
+          <div class="card-icon"><svg aria-hidden="true"><use href="#i-pin"/></svg></div>
+          <h3>Curitiba, Brasil inteiro</h3>
+          <p>Base no Paraná, atendimento remoto para qualquer estado.</p>
         </div>
       </div>
     </div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
-      <div class="hov11" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:24px 20px;transition:all .3s"><i class="fa-solid fa-users" style="font-size:20px;color:#6ea8ff"></i><h4 style="font-size:15px;font-weight:700;margin:12px 0 5px;color:#eef1f7">Mais clientes online</h4><p style="font-size:13px;color:#8b94a7;line-height:1.55;margin:0">Seu site trabalhando 24/7 para atrair e converter.</p></div>
-      <div class="hov12" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:24px 20px;transition:all .3s"><i class="fa-solid fa-bolt" style="font-size:20px;color:#6ea8ff"></i><h4 style="font-size:15px;font-weight:700;margin:12px 0 5px;color:#eef1f7">Carregamento rápido</h4><p style="font-size:13px;color:#8b94a7;line-height:1.55;margin:0">Tempos de carregamento abaixo de 2 segundos.</p></div>
-      <div class="hov13" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:24px 20px;transition:all .3s"><i class="fa-solid fa-building" style="font-size:20px;color:#6ea8ff"></i><h4 style="font-size:15px;font-weight:700;margin:12px 0 5px;color:#eef1f7">Presença profissional</h4><p style="font-size:13px;color:#8b94a7;line-height:1.55;margin:0">Autoridade e credibilidade que refletem seu negócio.</p></div>
-      <div class="hov14" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:24px 20px;transition:all .3s"><i class="fa-solid fa-paint-brush" style="font-size:20px;color:#6ea8ff"></i><h4 style="font-size:15px;font-weight:700;margin:12px 0 5px;color:#eef1f7">100% personalizado</h4><p style="font-size:13px;color:#8b94a7;line-height:1.55;margin:0">Cada projeto é único, criado sob medida.</p></div>
+    <div class="grid grid--2">
+      <div class="card">
+        <div class="card-icon"><svg aria-hidden="true"><use href="#i-zap"/></svg></div>
+        <h3>Carregamento rápido</h3>
+        <p>Site leve de verdade. Este que você está lendo abre em menos de um segundo.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><svg aria-hidden="true"><use href="#i-phone"/></svg></div>
+        <h3>Feito para o celular</h3>
+        <p>A maioria dos seus clientes vai chegar pelo telefone. O projeto começa por ali.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><svg aria-hidden="true"><use href="#i-building"/></svg></div>
+        <h3>Presença profissional</h3>
+        <p>Um site que passa a mesma impressão que o seu negócio passa pessoalmente.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><svg aria-hidden="true"><use href="#i-brush"/></svg></div>
+        <h3>Nada de template</h3>
+        <p>Cada projeto é desenhado do zero para o seu negócio — não é tema comprado.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="servicos" data-reveal="true" style="max-width:1180px;margin:0 auto;padding:clamp(64px,9vw,110px) clamp(16px,4vw,32px)">
-  <span style="display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#6ea8ff;margin-bottom:16px"><span style="width:22px;height:2px;background:#4f8ef7;border-radius:2px"></span>O que fazemos</span>
-  <h2 style="font-family:'Sora',sans-serif;font-size:clamp(28px,3.4vw,44px);font-weight:700;letter-spacing:-1.2px;line-height:1.15;color:#f2f5fb;margin:0 0 12px">Serviços de alto impacto</h2>
-  <p style="font-size:16.5px;color:#94a0b5;max-width:560px;line-height:1.7;margin:0 0 46px">Soluções completas para sua presença digital, do design à performance.</p>
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px">
-    <div class="hov15" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:18px;padding:30px 26px;transition:all .3s;position:relative;overflow:hidden">
-      <div style="width:50px;height:50px;background:rgba(63,111,228,0.12);border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:20px;color:#6ea8ff;margin-bottom:20px"><i class="fa-solid fa-globe"></i></div>
-      <h3 style="font-size:18px;font-weight:700;margin:0 0 8px;color:#eef1f7;letter-spacing:-0.3px">Sites Profissionais</h3>
-      <p style="font-size:14px;color:#8b94a7;line-height:1.65;margin:0">Sites institucionais completos, com design exclusivo e foco na identidade da sua marca.</p>
+<!-- ============================================================ SERVIÇOS -->
+<section class="section" id="servicos" data-reveal>
+  <span class="eyebrow">O que fazemos</span>
+  <h2>Serviços</h2>
+  <p class="lead" style="margin:.9rem 0 2.6rem">Soluções completas para sua presença digital, do design à velocidade.</p>
+  <div class="grid grid--4">
+    <div class="card">
+      <div class="card-icon"><svg aria-hidden="true"><use href="#i-globe"/></svg></div>
+      <h3>Sites institucionais</h3>
+      <p>Site completo com design exclusivo, construído em torno da identidade da sua marca.</p>
     </div>
-    <div class="hov16" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:18px;padding:30px 26px;transition:all .3s;position:relative;overflow:hidden">
-      <div style="width:50px;height:50px;background:rgba(63,111,228,0.12);border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:20px;color:#6ea8ff;margin-bottom:20px"><i class="fa-solid fa-bullseye"></i></div>
-      <h3 style="font-size:18px;font-weight:700;margin:0 0 8px;color:#eef1f7;letter-spacing:-0.3px">Landing Pages</h3>
-      <p style="font-size:14px;color:#8b94a7;line-height:1.65;margin:0">Páginas de alta conversão para campanhas, com copywriting estratégico e CTAs inteligentes.</p>
+    <div class="card">
+      <div class="card-icon"><svg aria-hidden="true"><use href="#i-target"/></svg></div>
+      <h3>Landing pages</h3>
+      <p>Página única focada em conversão, com texto estratégico e chamadas certeiras.</p>
     </div>
-    <div class="hov17" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:18px;padding:30px 26px;transition:all .3s;position:relative;overflow:hidden">
-      <div style="width:50px;height:50px;background:rgba(63,111,228,0.12);border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:20px;color:#6ea8ff;margin-bottom:20px"><i class="fa-solid fa-mobile-screen-button"></i></div>
-      <h3 style="font-size:18px;font-weight:700;margin:0 0 8px;color:#eef1f7;letter-spacing:-0.3px">Design Mobile First</h3>
-      <p style="font-size:14px;color:#8b94a7;line-height:1.65;margin:0">Layouts responsivos que funcionam perfeitamente em qualquer dispositivo.</p>
+    <div class="card">
+      <div class="card-icon"><svg aria-hidden="true"><use href="#i-phone"/></svg></div>
+      <h3>Cardápio e pedidos</h3>
+      <p>Cardápio digital, reserva e pedido direto no WhatsApp, sem taxa de aplicativo.</p>
     </div>
-    <div class="hov18" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:18px;padding:30px 26px;transition:all .3s;position:relative;overflow:hidden">
-      <div style="width:50px;height:50px;background:rgba(63,111,228,0.12);border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:20px;color:#6ea8ff;margin-bottom:20px"><i class="fa-solid fa-gauge-high"></i></div>
-      <h3 style="font-size:18px;font-weight:700;margin:0 0 8px;color:#eef1f7;letter-spacing:-0.3px">SEO e Velocidade</h3>
-      <p style="font-size:14px;color:#8b94a7;line-height:1.65;margin:0">Carregamento ultrarrápido e estrutura otimizada para mecanismos de busca.</p>
-    </div>
-  </div>
-</section>
-
-<section id="processo" data-reveal="true" style="max-width:1180px;margin:0 auto;padding:clamp(64px,9vw,110px) clamp(16px,4vw,32px)">
-  <span style="display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#6ea8ff;margin-bottom:16px"><span style="width:22px;height:2px;background:#4f8ef7;border-radius:2px"></span>Como funciona</span>
-  <h2 style="font-family:'Sora',sans-serif;font-size:clamp(28px,3.4vw,44px);font-weight:700;letter-spacing:-1.2px;line-height:1.15;color:#f2f5fb;margin:0 0 12px">Do primeiro contato ao lançamento</h2>
-  <p style="font-size:16.5px;color:#94a0b5;max-width:560px;line-height:1.7;margin:0 0 46px">Um processo simples e transparente — você acompanha cada etapa pelo WhatsApp.</p>
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px">
-    <div class="hov19" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:18px;padding:28px 24px;transition:all .3s">
-      <div style="font-family:'Sora',sans-serif;font-size:13px;font-weight:800;color:#6ea8ff;letter-spacing:2px;margin-bottom:14px">01</div>
-      <h3 style="font-size:17px;font-weight:700;margin:0 0 8px;color:#eef1f7">Conversa inicial</h3>
-      <p style="font-size:13.5px;color:#8b94a7;line-height:1.65;margin:0">Você conta o que precisa pelo WhatsApp. Entendemos seu negócio, público e objetivos.</p>
-    </div>
-    <div class="hov20" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:18px;padding:28px 24px;transition:all .3s">
-      <div style="font-family:'Sora',sans-serif;font-size:13px;font-weight:800;color:#6ea8ff;letter-spacing:2px;margin-bottom:14px">02</div>
-      <h3 style="font-size:17px;font-weight:700;margin:0 0 8px;color:#eef1f7">Proposta e plano</h3>
-      <p style="font-size:13.5px;color:#8b94a7;line-height:1.65;margin:0">Orçamento claro, prazo definido e estrutura do site aprovada antes de começar.</p>
-    </div>
-    <div class="hov21" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:18px;padding:28px 24px;transition:all .3s">
-      <div style="font-family:'Sora',sans-serif;font-size:13px;font-weight:800;color:#6ea8ff;letter-spacing:2px;margin-bottom:14px">03</div>
-      <h3 style="font-size:17px;font-weight:700;margin:0 0 8px;color:#eef1f7">Design e desenvolvimento</h3>
-      <p style="font-size:13.5px;color:#8b94a7;line-height:1.65;margin:0">Criamos o layout, você revisa e ajustamos até ficar do seu jeito.</p>
-    </div>
-    <div class="hov22" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:18px;padding:28px 24px;transition:all .3s">
-      <div style="font-family:'Sora',sans-serif;font-size:13px;font-weight:800;color:#6ea8ff;letter-spacing:2px;margin-bottom:14px">04</div>
-      <h3 style="font-size:17px;font-weight:700;margin:0 0 8px;color:#eef1f7">Lançamento e suporte</h3>
-      <p style="font-size:13.5px;color:#8b94a7;line-height:1.65;margin:0">Site no ar com domínio, hospedagem e suporte contínuo para o que precisar.</p>
+    <div class="card">
+      <div class="card-icon"><svg aria-hidden="true"><use href="#i-gauge"/></svg></div>
+      <h3>SEO e velocidade</h3>
+      <p>Estrutura otimizada para o Google e carregamento que não faz ninguém desistir.</p>
     </div>
   </div>
 </section>
 
-<section id="portfolio" data-reveal="true" style="max-width:1180px;margin:0 auto;padding:clamp(64px,9vw,110px) clamp(16px,4vw,32px)">
-  <span style="display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#6ea8ff;margin-bottom:16px"><span style="width:22px;height:2px;background:#4f8ef7;border-radius:2px"></span>Portfólio</span>
-  <h2 style="font-family:'Sora',sans-serif;font-size:clamp(28px,3.4vw,44px);font-weight:700;letter-spacing:-1.2px;line-height:1.15;color:#f2f5fb;margin:0 0 12px">Projetos que falam por si mesmos</h2>
-  <p style="font-size:16.5px;color:#94a0b5;max-width:560px;line-height:1.7;margin:0 0 46px">Trabalhos recentes para hotéis, restaurantes e empresas.</p>
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:20px">
-
-    <div class="hov23" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:18px;overflow:hidden;transition:all .35s;cursor:pointer">
-      <div style="aspect-ratio:16/11;background:linear-gradient(160deg,#101a2e,#0b1322);display:flex;align-items:flex-end;justify-content:center;overflow:hidden;padding:22px 22px 0">
-        <div class="hov24" style="width:100%;background:#f6f1e6;border-radius:8px 8px 0 0;box-shadow:0 -6px 40px rgba(0,0,0,0.45);overflow:hidden;transition:transform .4s">
-          <div style="display:flex;justify-content:space-between;align-items:center;padding:9px 12px;border-bottom:1px solid #e5dcc8">
-            <span style="font-family:Georgia,serif;font-size:11px;font-weight:700;color:#2f4a3a;font-style:italic">La Dolce Vita Park</span>
-            <span style="display:flex;gap:8px;align-items:center"><span style="font-size:7px;color:#6b6353;font-weight:600">HOTEL</span><span style="font-size:7px;color:#6b6353;font-weight:600">EVENTOS</span><span style="background:#b98d4f;color:#fff;font-size:6.5px;font-weight:700;padding:3px 9px;border-radius:20px">RESERVAR</span></span>
-          </div>
-          <div style="height:88px;background:linear-gradient(140deg,#3d5c48,#243b2d 55%,#182a1e);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px">
-            <span style="font-family:Georgia,serif;color:#f2ead8;font-size:12.5px;font-style:italic;text-align:center;line-height:1.35">Um refúgio de requinte<br>e imersão na natureza</span>
-            <span style="border:1px solid rgba(242,234,216,0.6);color:#f2ead8;font-size:6.5px;font-weight:700;letter-spacing:1px;padding:3px 10px;border-radius:20px">EXPLORE O PARAÍSO</span>
-          </div>
-          <div style="display:flex;gap:7px;padding:8px 10px 12px">
-            <span style="flex:1;height:30px;border-radius:4px;background:linear-gradient(135deg,#57755f,#3a5344)"></span>
-            <span style="flex:1;height:30px;border-radius:4px;background:linear-gradient(135deg,#8a6a3e,#6b5231)"></span>
-            <span style="flex:1;height:30px;border-radius:4px;background:linear-gradient(135deg,#44604e,#2c4436)"></span>
-          </div>
-        </div>
-      </div>
-      <div style="padding:20px 22px 22px">
-        <span style="font-size:11px;color:#6ea8ff;font-weight:700;text-transform:uppercase;letter-spacing:1.5px">Hotel</span>
-        <h3 style="font-size:17px;font-weight:700;margin:5px 0 6px;color:#eef1f7;letter-spacing:-0.3px">La Dolce Vita Park</h3>
-        <p style="font-size:13.5px;color:#8b94a7;line-height:1.6;margin:0">Site com reservas online, galeria de acomodações e páginas de eventos para hotel-parque em meio à natureza.</p>
-      </div>
+<!-- ============================================================ PROCESSO -->
+<section class="section" id="processo" data-reveal>
+  <span class="eyebrow">Como funciona</span>
+  <h2>Do primeiro contato ao lançamento</h2>
+  <p class="lead" style="margin:.9rem 0 2.6rem">Processo simples e transparente — você acompanha cada etapa pelo WhatsApp.</p>
+  <div class="grid grid--4">
+    <div class="card">
+      <div class="small" style="color:var(--brass);font-weight:700;letter-spacing:.14em;margin-bottom:.7rem">01</div>
+      <h3>Conversa inicial</h3>
+      <p>Você conta o que precisa. Entendemos o negócio, o público e o objetivo.</p>
     </div>
-
-    <div class="hov25" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:18px;overflow:hidden;transition:all .35s;cursor:pointer">
-      <div style="aspect-ratio:16/11;background:linear-gradient(160deg,#171019,#0e0a10);display:flex;align-items:flex-end;justify-content:center;overflow:hidden;padding:22px 22px 0">
-        <div class="hov26" style="width:100%;background:#16100b;border:1px solid #2b1d12;border-bottom:none;border-radius:8px 8px 0 0;box-shadow:0 -6px 40px rgba(0,0,0,0.55);overflow:hidden;transition:transform .4s">
-          <div style="display:flex;justify-content:space-between;align-items:center;padding:9px 12px;border-bottom:1px solid #2b1d12">
-            <span style="font-family:Georgia,serif;font-size:11px;font-weight:700;color:#e8dcc8">Borda &amp; Lenha</span>
-            <span style="display:flex;gap:8px;align-items:center"><span style="font-size:7px;color:#9a8468;font-weight:600">CARDÁPIO</span><span style="font-size:7px;color:#9a8468;font-weight:600">SOBRE</span><span style="background:#e2762d;color:#fff;font-size:6.5px;font-weight:700;padding:3px 9px;border-radius:20px">PEDIR AGORA</span></span>
-          </div>
-          <div style="height:88px;background:radial-gradient(circle at 28% 65%,#82411500 0%,transparent 60%),radial-gradient(circle at 30% 60%,#7a3d14,#3a1e0c 70%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px">
-            <span style="font-family:Georgia,serif;color:#f6e8d4;font-size:13px;text-align:center;line-height:1.35">Sabor que nasce do fogo</span>
-            <span style="background:#e2762d;color:#fff;font-size:6.5px;font-weight:700;letter-spacing:1px;padding:3px 10px;border-radius:20px">PEDIR NO WHATSAPP</span>
-          </div>
-          <div style="display:flex;gap:7px;padding:8px 10px 12px">
-            <span style="flex:1;height:30px;border-radius:4px;background:linear-gradient(135deg,#5c2f14,#3d200e)"></span>
-            <span style="flex:1;height:30px;border-radius:4px;background:linear-gradient(135deg,#84431a,#55290e)"></span>
-            <span style="flex:1;height:30px;border-radius:4px;background:linear-gradient(135deg,#4a2812,#301a0a)"></span>
-          </div>
-        </div>
-      </div>
-      <div style="padding:20px 22px 22px">
-        <span style="font-size:11px;color:#6ea8ff;font-weight:700;text-transform:uppercase;letter-spacing:1.5px">Restaurante</span>
-        <h3 style="font-size:17px;font-weight:700;margin:5px 0 6px;color:#eef1f7;letter-spacing:-0.3px">Borda &amp; Lenha</h3>
-        <p style="font-size:13.5px;color:#8b94a7;line-height:1.6;margin:0">Landing page de alta conversão com cardápio digital e pedidos direto pelo WhatsApp.</p>
-      </div>
+    <div class="card">
+      <div class="small" style="color:var(--brass);font-weight:700;letter-spacing:.14em;margin-bottom:.7rem">02</div>
+      <h3>Proposta fechada</h3>
+      <p>Escopo, valor e prazo definidos por escrito antes de qualquer trabalho começar.</p>
     </div>
+    <div class="card">
+      <div class="small" style="color:var(--brass);font-weight:700;letter-spacing:.14em;margin-bottom:.7rem">03</div>
+      <h3>Design e código</h3>
+      <p>Você aprova o layout, desenvolvemos, e ajustamos até ficar do seu jeito.</p>
+    </div>
+    <div class="card">
+      <div class="small" style="color:var(--brass);font-weight:700;letter-spacing:.14em;margin-bottom:.7rem">04</div>
+      <h3>No ar e com suporte</h3>
+      <p>Domínio, hospedagem e certificado configurados. Depois, seguimos por perto.</p>
+    </div>
+  </div>
+</section>
 
-    <div class="hov27" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:18px;overflow:hidden;transition:all .35s;cursor:pointer">
-      <div style="aspect-ratio:16/11;background:linear-gradient(160deg,#0d1a2b,#091220);display:flex;align-items:flex-end;justify-content:center;overflow:hidden;padding:22px 22px 0">
-        <div class="hov28" style="width:100%;background:#f4f7fa;border-radius:8px 8px 0 0;box-shadow:0 -6px 40px rgba(0,0,0,0.45);overflow:hidden;transition:transform .4s">
-          <div style="display:flex;justify-content:space-between;align-items:center;padding:9px 12px;border-bottom:1px solid #e3e9f0">
-            <span style="font-size:10.5px;font-weight:800;color:#123a6b;letter-spacing:-0.2px">GRUPO <span style="color:#e8a020">HORIZONTE</span></span>
-            <span style="display:flex;gap:8px;align-items:center"><span style="font-size:7px;color:#5b6b7e;font-weight:600">FROTA</span><span style="font-size:7px;color:#5b6b7e;font-weight:600">SERVIÇOS</span><span style="background:#123a6b;color:#fff;font-size:6.5px;font-weight:700;padding:3px 9px;border-radius:3px">COTAÇÃO</span></span>
+<!-- ============================================================ ESTUDOS -->
+<section class="section" id="estudos" data-reveal>
+  <span class="eyebrow">Estudos de design</span>
+  <h2>Três direções, três segmentos</h2>
+  <p class="lead" style="margin:.9rem 0 1rem">Conceitos que criamos para mostrar como pensamos cada tipo de negócio — a linguagem visual de um hotel de natureza não é a de uma pizzaria a lenha, nem a de uma transportadora.</p>
+  <p class="lead small" style="margin-bottom:2.6rem;color:var(--ink-mute)">
+    <strong>Para deixar claro:</strong> estes três são estudos autorais, não clientes atendidos. Estamos começando e preferimos te dizer isso do que inventar depoimento. O trabalho real que você pode avaliar agora é <strong>este site</strong> — desenhado, animado e programado por nós dois, e você já está navegando nele.
+  </p>
+  <div class="grid grid--3">
+
+    <article class="study">
+      <div class="study__stage" aria-hidden="true" style="background:linear-gradient(160deg,#14180f,#0b0d08)">
+        <div class="study__mock" style="background:#f6f1e6">
+          <div class="study__mock-bar" style="border-bottom:1px solid #e5dcc8">
+            <span style="font-family:Georgia,serif;font-size:.65rem;font-weight:700;color:#2f4a3a;font-style:italic">La Dolce Vita Park</span>
+            <span style="display:flex;gap:.5rem;align-items:center">
+              <span style="font-size:.4rem;color:#6b6353;font-weight:600">HOTEL</span>
+              <span style="font-size:.4rem;color:#6b6353;font-weight:600">EVENTOS</span>
+              <span class="pill" style="background:#b98d4f;color:#fff">RESERVAR</span>
+            </span>
           </div>
-          <div style="height:88px;background:linear-gradient(120deg,#123a6b,#1d5494 70%,#2a69b4);display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:5px;padding:0 14px;position:relative;overflow:hidden">
-            <span aria-hidden="true" style="position:absolute;right:-18px;bottom:-24px;width:110px;height:110px;border-radius:50%;background:rgba(232,160,32,0.18)"></span>
-            <span style="color:#fff;font-size:12px;font-weight:800;line-height:1.3;letter-spacing:-0.2px">Logística que move<br>o seu negócio</span>
-            <span style="background:#e8a020;color:#12263f;font-size:6.5px;font-weight:800;letter-spacing:1px;padding:3px 10px;border-radius:3px">SOLICITAR COTAÇÃO</span>
+          <div class="study__mock-hero" style="background:linear-gradient(140deg,#3d5c48,#243b2d 55%,#182a1e)">
+            <span style="font-family:Georgia,serif;color:#f2ead8;font-size:.75rem;font-style:italic;text-align:center;line-height:1.35">Um refúgio de requinte<br>e imersão na natureza</span>
+            <span class="pill" style="border:1px solid rgba(242,234,216,.6);color:#f2ead8">EXPLORE O PARAÍSO</span>
           </div>
-          <div style="display:flex;gap:7px;padding:8px 10px 12px">
-            <span style="flex:1;height:30px;border-radius:4px;background:#e8eef5;display:flex;align-items:center;justify-content:center;color:#123a6b;font-size:9px"><i class="fa-solid fa-truck-fast"></i></span>
-            <span style="flex:1;height:30px;border-radius:4px;background:#e8eef5;display:flex;align-items:center;justify-content:center;color:#123a6b;font-size:9px"><i class="fa-solid fa-warehouse"></i></span>
-            <span style="flex:1;height:30px;border-radius:4px;background:#e8eef5;display:flex;align-items:center;justify-content:center;color:#123a6b;font-size:9px"><i class="fa-solid fa-route"></i></span>
+          <div class="study__mock-row">
+            <span style="background:linear-gradient(135deg,#57755f,#3a5344)"></span>
+            <span style="background:linear-gradient(135deg,#8a6a3e,#6b5231)"></span>
+            <span style="background:linear-gradient(135deg,#44604e,#2c4436)"></span>
           </div>
         </div>
       </div>
-      <div style="padding:20px 22px 22px">
-        <span style="font-size:11px;color:#6ea8ff;font-weight:700;text-transform:uppercase;letter-spacing:1.5px">Transportes</span>
-        <h3 style="font-size:17px;font-weight:700;margin:5px 0 6px;color:#eef1f7;letter-spacing:-0.3px">Grupo Horizonte</h3>
-        <p style="font-size:13.5px;color:#8b94a7;line-height:1.6;margin:0">Site institucional corporativo com apresentação de frota, serviços e solicitação de cotação.</p>
+      <div class="study__body">
+        <span class="study__tag">Hotel</span>
+        <h3>La Dolce Vita Park</h3>
+        <p>Conceito de site com reservas online, galeria de acomodações e páginas de eventos para hotel-parque em meio à natureza.</p>
       </div>
+    </article>
+
+    <article class="study">
+      <div class="study__stage" aria-hidden="true" style="background:linear-gradient(160deg,#191009,#0e0906)">
+        <div class="study__mock" style="background:#16100b;border:1px solid #2b1d12;border-bottom:none">
+          <div class="study__mock-bar" style="border-bottom:1px solid #2b1d12">
+            <span style="font-family:Georgia,serif;font-size:.65rem;font-weight:700;color:#e8dcc8">Borda &amp; Lenha</span>
+            <span style="display:flex;gap:.5rem;align-items:center">
+              <span style="font-size:.4rem;color:#9a8468;font-weight:600">CARDÁPIO</span>
+              <span style="font-size:.4rem;color:#9a8468;font-weight:600">SOBRE</span>
+              <span class="pill" style="background:#e2762d;color:#fff">PEDIR AGORA</span>
+            </span>
+          </div>
+          <div class="study__mock-hero" style="background:radial-gradient(circle at 30% 60%,#7a3d14,#3a1e0c 70%)">
+            <span style="font-family:Georgia,serif;color:#f6e8d4;font-size:.78rem;text-align:center;line-height:1.35">Sabor que nasce do fogo</span>
+            <span class="pill" style="background:#e2762d;color:#fff">PEDIR NO WHATSAPP</span>
+          </div>
+          <div class="study__mock-row">
+            <span style="background:linear-gradient(135deg,#5c2f14,#3d200e)"></span>
+            <span style="background:linear-gradient(135deg,#84431a,#55290e)"></span>
+            <span style="background:linear-gradient(135deg,#4a2812,#301a0a)"></span>
+          </div>
+        </div>
+      </div>
+      <div class="study__body">
+        <span class="study__tag">Restaurante</span>
+        <h3>Borda &amp; Lenha</h3>
+        <p>Conceito de landing page com cardápio digital e pedido direto pelo WhatsApp, sem intermediário cobrando comissão.</p>
+      </div>
+    </article>
+
+    <article class="study">
+      <div class="study__stage" aria-hidden="true" style="background:linear-gradient(160deg,#0e1218,#080a0e)">
+        <div class="study__mock" style="background:#f4f7fa">
+          <div class="study__mock-bar" style="border-bottom:1px solid #e3e9f0">
+            <span style="font-size:.62rem;font-weight:800;color:#123a6b;letter-spacing:-.01em">GRUPO <span style="color:#b8780c">HORIZONTE</span></span>
+            <span style="display:flex;gap:.5rem;align-items:center">
+              <span style="font-size:.4rem;color:#5b6b7e;font-weight:600">FROTA</span>
+              <span style="font-size:.4rem;color:#5b6b7e;font-weight:600">SERVIÇOS</span>
+              <span class="pill" style="background:#123a6b;color:#fff;border-radius:3px">COTAÇÃO</span>
+            </span>
+          </div>
+          <div class="study__mock-hero" style="background:linear-gradient(120deg,#123a6b,#1d5494 70%,#2a69b4);align-items:flex-start;padding:0 .9rem;position:relative;overflow:hidden">
+            <span aria-hidden="true" style="position:absolute;right:-18px;bottom:-24px;width:110px;height:110px;border-radius:50%;background:rgba(232,160,32,.18)"></span>
+            <span style="color:#fff;font-size:.72rem;font-weight:800;line-height:1.3;position:relative">Logística que move<br>o seu negócio</span>
+            <span class="pill" style="background:#e8a020;color:#12263f;border-radius:3px;position:relative">SOLICITAR COTAÇÃO</span>
+          </div>
+          <div class="study__mock-row">
+            <span style="background:#e8eef5;color:#123a6b"><svg width="11" height="11" aria-hidden="true"><use href="#i-truck"/></svg></span>
+            <span style="background:#e8eef5;color:#123a6b"><svg width="11" height="11" aria-hidden="true"><use href="#i-box"/></svg></span>
+            <span style="background:#e8eef5;color:#123a6b"><svg width="11" height="11" aria-hidden="true"><use href="#i-route"/></svg></span>
+          </div>
+        </div>
+      </div>
+      <div class="study__body">
+        <span class="study__tag">Transportes</span>
+        <h3>Grupo Horizonte</h3>
+        <p>Conceito de site institucional corporativo com apresentação de frota, serviços e formulário de cotação.</p>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============================================================ GARANTIAS -->
+<section class="section" id="garantias" data-reveal>
+  <span class="eyebrow">Sem risco para você</span>
+  <h2>O que garantimos antes de você decidir</h2>
+  <p class="lead" style="margin:.9rem 0 2.6rem">Contratar quem você nunca viu dá medo — e o medo é justificado. Então aqui está exatamente o que está combinado desde o começo.</p>
+  <div class="grid grid--4">
+    <div class="card">
+      <div class="card-icon"><svg aria-hidden="true"><use href="#i-shield"/></svg></div>
+      <h3>Valor fechado antes</h3>
+      <p>Escopo, preço e prazo por escrito antes de começarmos. Sem surpresa no meio do caminho.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg aria-hidden="true"><use href="#i-eye"/></svg></div>
+      <h3>Você aprova o layout</h3>
+      <p>O design vem antes do código. Só seguimos em frente quando estiver do seu agrado.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg aria-hidden="true"><use href="#i-key"/></svg></div>
+      <h3>O domínio é seu</h3>
+      <p>Registrado no seu nome, com todos os acessos na sua mão. Você nunca fica preso a nós.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg aria-hidden="true"><use href="#i-refresh"/></svg></div>
+      <h3>Ajustes inclusos</h3>
+      <p>Período de ajustes após a entrega já faz parte do combinado, sem cobrança extra.</p>
     </div>
   </div>
 </section>
 
-<section id="depoimentos" data-reveal="true" style="max-width:1180px;margin:0 auto;padding:clamp(64px,9vw,110px) clamp(16px,4vw,32px)">
-  <span style="display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#6ea8ff;margin-bottom:16px"><span style="width:22px;height:2px;background:#4f8ef7;border-radius:2px"></span>Depoimentos</span>
-  <h2 style="font-family:'Sora',sans-serif;font-size:clamp(28px,3.4vw,44px);font-weight:700;letter-spacing:-1.2px;line-height:1.15;color:#f2f5fb;margin:0 0 46px;max-width:640px">Quem já transformou seu negócio com a Vertex</h2>
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px">
-    <div class="hov29" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:18px;padding:28px;transition:all .3s">
-      <div style="color:#f0b429;font-size:13px;letter-spacing:2.5px;margin-bottom:14px">★★★★★</div>
-      <p style="font-size:14.5px;color:#b9c1d1;line-height:1.7;margin:0 0 20px;font-style:italic">"Depois que a Vertex criou nosso site, as reservas online aumentaram mais de 60%. O design transmite exatamente a atmosfera do nosso hotel."</p>
-      <div style="display:flex;align-items:center;gap:12px">
-        <span style="width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#2f6fe4,#5b5ff0);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;color:#fff">RM</span>
-        <span><span style="display:block;font-weight:700;font-size:14px;color:#eef1f7">Ricardo Marques</span><span style="font-size:12px;color:#7e8aa0">Gestor — La Dolce Vita Park</span></span>
-      </div>
+<!-- ============================================================ QUALIFICADOR -->
+<section class="section section--narrow" id="orcamento" data-reveal>
+  <span class="eyebrow">Orçamento</span>
+  <h2>Monte seu escopo em três cliques</h2>
+  <p class="lead" style="margin:.9rem 0 2.2rem">Cada site é orçado pelo escopo e pelo tempo que exige, então não existe tabela. Escolha abaixo o que se aplica a você — a mensagem se monta sozinha e já respondemos com um valor fechado.</p>
+
+  <div class="qz">
+    <div class="qz__step">
+      <span class="qz__q" id="qz-l1">Seu negócio é…</span>
+      <fieldset class="qz__opts" aria-labelledby="qz-l1">
+        <label class="qz__opt"><input type="radio" name="qzTipo" value="um restaurante"><span>Restaurante</span></label>
+        <label class="qz__opt"><input type="radio" name="qzTipo" value="um hotel ou pousada"><span>Hotel ou pousada</span></label>
+        <label class="qz__opt"><input type="radio" name="qzTipo" value="uma empresa"><span>Empresa</span></label>
+        <label class="qz__opt"><input type="radio" name="qzTipo" value="outro tipo de negócio"><span>Outro</span></label>
+      </fieldset>
     </div>
-    <div class="hov30" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:18px;padding:28px;transition:all .3s">
-      <div style="color:#f0b429;font-size:13px;letter-spacing:2.5px;margin-bottom:14px">★★★★★</div>
-      <p style="font-size:14.5px;color:#b9c1d1;line-height:1.7;margin:0 0 20px;font-style:italic">"Profissionalismo do início ao fim. Os pedidos pelo WhatsApp dispararam depois da nova landing page. Superou todas as expectativas."</p>
-      <div style="display:flex;align-items:center;gap:12px">
-        <span style="width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#2f6fe4,#5b5ff0);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;color:#fff">AS</span>
-        <span><span style="display:block;font-weight:700;font-size:14px;color:#eef1f7">Aline Souza</span><span style="font-size:12px;color:#7e8aa0">Proprietária — Borda &amp; Lenha</span></span>
-      </div>
+
+    <div class="qz__step">
+      <span class="qz__q" id="qz-l2">E você precisa de… <span class="qz__hint">(pode marcar mais de um)</span></span>
+      <fieldset class="qz__opts" aria-labelledby="qz-l2">
+        <label class="qz__opt"><input type="checkbox" name="qzNec" value="um site institucional"><span>Site institucional</span></label>
+        <label class="qz__opt"><input type="checkbox" name="qzNec" value="uma landing page"><span>Landing page</span></label>
+        <label class="qz__opt"><input type="checkbox" name="qzNec" value="cardápio digital"><span>Cardápio digital</span></label>
+        <label class="qz__opt"><input type="checkbox" name="qzNec" value="pedido ou reserva pelo WhatsApp"><span>Pedido ou reserva</span></label>
+        <label class="qz__opt"><input type="checkbox" name="qzNec" value="reformular um site que já existe"><span>Reformular o que já tenho</span></label>
+      </fieldset>
     </div>
-    <div class="hov31" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:18px;padding:28px;transition:all .3s">
-      <div style="color:#f0b429;font-size:13px;letter-spacing:2.5px;margin-bottom:14px">★★★★★</div>
-      <p style="font-size:14.5px;color:#b9c1d1;line-height:1.7;margin:0 0 20px;font-style:italic">"Site rápido, moderno e que realmente gera cotações. A Vertex entendeu perfeitamente o que uma transportadora precisa."</p>
-      <div style="display:flex;align-items:center;gap:12px">
-        <span style="width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#2f6fe4,#5b5ff0);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;color:#fff">GP</span>
-        <span><span style="display:block;font-weight:700;font-size:14px;color:#eef1f7">Gustavo Pereira</span><span style="font-size:12px;color:#7e8aa0">Diretor — Grupo Horizonte</span></span>
-      </div>
+
+    <div class="qz__step">
+      <span class="qz__q" id="qz-l3">Sobre textos e fotos…</span>
+      <fieldset class="qz__opts" aria-labelledby="qz-l3">
+        <label class="qz__opt"><input type="radio" name="qzConteudo" value="já tenho textos e fotos prontos"><span>Já tenho tudo</span></label>
+        <label class="qz__opt"><input type="radio" name="qzConteudo" value="tenho fotos, mas preciso de ajuda com os textos"><span>Tenho fotos, faltam textos</span></label>
+        <label class="qz__opt"><input type="radio" name="qzConteudo" value="ainda não tenho textos nem fotos"><span>Não tenho nada ainda</span></label>
+      </fieldset>
+    </div>
+
+    <div class="qz__out">
+      <p class="qz__preview" id="qzPreview"><span class="qz__empty">Escolha as opções acima e sua mensagem aparece aqui, pronta para enviar.</span></p>
+      <a id="qzSend" class="btn btn--primary btn--block" href="https://wa.me/5541997411544" target="_blank" rel="noopener">
+        <svg aria-hidden="true"><use href="#i-whatsapp"/></svg>Enviar no WhatsApp
+      </a>
+      <p class="small muted" style="margin-top:.9rem;text-align:center">Nada é enviado ou armazenado por este site — suas escolhas só montam o texto da mensagem, que abre no seu WhatsApp para você revisar antes de mandar.</p>
     </div>
   </div>
 </section>
 
-<section id="faq" data-reveal="true" style="max-width:820px;margin:0 auto;padding:clamp(64px,9vw,110px) clamp(16px,4vw,32px)">
-  <span style="display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#6ea8ff;margin-bottom:16px"><span style="width:22px;height:2px;background:#4f8ef7;border-radius:2px"></span>Dúvidas frequentes</span>
-  <h2 style="font-family:'Sora',sans-serif;font-size:clamp(28px,3.4vw,44px);font-weight:700;letter-spacing:-1.2px;line-height:1.15;color:#f2f5fb;margin:0 0 40px">Perguntas que sempre recebemos</h2>
-  <div style="display:flex;flex-direction:column;gap:12px">
-    <details class="faq-item" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:14px;overflow:hidden"><summary style="width:100%;background:none;border:none;color:#eef1f7;font-family:'Manrope',sans-serif;font-size:15.5px;font-weight:700;padding:20px 22px;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px">Quanto tempo leva para o site ficar pronto?<i class="fa-solid fa-chevron-down faq-chevron" style="color:#6ea8ff;font-size:12px"></i></summary><p style="margin:0;padding:0 22px 20px;font-size:14px;color:#94a0b5;line-height:1.7">Em média 7 a 14 dias, dependendo da complexidade. Landing pages costumam ficar prontas em uma semana; sites institucionais completos em até duas.</p></details>
-    <details class="faq-item" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:14px;overflow:hidden"><summary style="width:100%;background:none;border:none;color:#eef1f7;font-family:'Manrope',sans-serif;font-size:15.5px;font-weight:700;padding:20px 22px;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px">Como funciona o orçamento?<i class="fa-solid fa-chevron-down faq-chevron" style="color:#6ea8ff;font-size:12px"></i></summary><p style="margin:0;padding:0 22px 20px;font-size:14px;color:#94a0b5;line-height:1.7">Você nos conta o que precisa pelo WhatsApp e enviamos uma proposta sem compromisso, com valor fechado e prazo definido. Sem surpresas no meio do caminho.</p></details>
-    <details class="faq-item" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:14px;overflow:hidden"><summary style="width:100%;background:none;border:none;color:#eef1f7;font-family:'Manrope',sans-serif;font-size:15.5px;font-weight:700;padding:20px 22px;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px">Domínio e hospedagem estão incluídos?<i class="fa-solid fa-chevron-down faq-chevron" style="color:#6ea8ff;font-size:12px"></i></summary><p style="margin:0;padding:0 22px 20px;font-size:14px;color:#94a0b5;line-height:1.7">Cuidamos de tudo: registro do domínio, configuração da hospedagem e certificado de segurança. Você recebe o site pronto e no ar.</p></details>
-    <details class="faq-item" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:14px;overflow:hidden"><summary style="width:100%;background:none;border:none;color:#eef1f7;font-family:'Manrope',sans-serif;font-size:15.5px;font-weight:700;padding:20px 22px;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px">Posso pedir alterações depois do lançamento?<i class="fa-solid fa-chevron-down faq-chevron" style="color:#6ea8ff;font-size:12px"></i></summary><p style="margin:0;padding:0 22px 20px;font-size:14px;color:#94a0b5;line-height:1.7">Sim. Todo projeto inclui um período de ajustes após a entrega, e oferecemos planos de manutenção para atualizações contínuas.</p></details>
+<!-- ============================================================ FAQ -->
+<section class="section section--narrow" id="faq" data-reveal>
+  <span class="eyebrow">Dúvidas frequentes</span>
+  <h2>As perguntas que todo mundo faz</h2>
+  <div class="faq" style="margin-top:2.4rem">
+    <details>
+      <summary>Quanto custa um site?<svg aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+      <p>Cada projeto é orçado individualmente, porque o valor depende do escopo e do tempo envolvido. O que mais pesa: número de páginas, se precisa de cardápio digital, reserva ou pedido online, se o conteúdo e as fotos já existem ou precisam ser produzidos, e se há integração com algum sistema que você já usa. Monte seu escopo aqui no site e respondemos com um valor fechado, sem compromisso.</p>
+    </details>
+    <details>
+      <summary>O que está incluso em todo projeto?<svg aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+      <p>Registro do domínio, hospedagem, certificado de segurança HTTPS, versão para celular, otimização para buscadores e um período de ajustes após a entrega. Você recebe o site pronto e no ar, sem precisar contratar nada à parte.</p>
+    </details>
+    <details>
+      <summary>O domínio fica no meu nome?<svg aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+      <p>Sim. O domínio é registrado no seu nome ou no CNPJ da sua empresa, e você recebe todos os acessos. Se um dia quiser levar o site para outro fornecedor, ele é seu e vai com você. Você não fica preso a nós — e desconfie de quem não fizer assim.</p>
+    </details>
+    <details>
+      <summary>E se eu não gostar do layout?<svg aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+      <p>Você aprova o layout antes de partirmos para o desenvolvimento, e temos rodadas de ajuste até chegar no ponto. Ninguém desenvolve um site inteiro para o cliente descobrir no fim que não era aquilo.</p>
+    </details>
+    <details>
+      <summary>Quanto tempo leva?<svg aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+      <p>Até 8 dias na maioria dos projetos, e landing pages costumam ficar prontas antes disso. O prazo exato é definido junto com o orçamento, por escrito, antes de começar. Um detalhe para ser justo com os dois lados: a contagem começa quando recebemos os textos, as fotos e as informações do seu negócio. Se esse material demorar, o prazo acompanha — e se você não tiver o conteúdo pronto, a gente ajuda a resolver isso também.</p>
+    </details>
+    <details>
+      <summary>Quem atualiza o site depois que ele está no ar?<svg aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+      <p>Você escolhe. Podemos cuidar das atualizações em um plano de manutenção, ou deixar o site preparado para você mesmo alterar textos, fotos e cardápio. Explicamos as duas opções no orçamento para você decidir com clareza.</p>
+    </details>
   </div>
 </section>
 
-<section id="contato" data-reveal="true" style="text-align:center;padding:clamp(70px,10vw,120px) clamp(16px,4vw,32px);position:relative;overflow:hidden">
-  <div aria-hidden="true" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:620px;height:620px;background:radial-gradient(circle,rgba(63,111,228,0.12),transparent 68%);border-radius:50%;pointer-events:none"></div>
-  <div style="max-width:680px;margin:0 auto;position:relative;z-index:2">
-    <h2 style="font-family:'Sora',sans-serif;font-size:clamp(30px,4vw,48px);font-weight:800;letter-spacing:-1.4px;line-height:1.12;margin:0 0 16px;color:#f4f7fd">Pronto para levar seu negócio para o próximo nível?</h2>
-    <p style="font-size:17px;color:#94a0b5;margin:0 0 34px;line-height:1.65">Fale com a gente agora — o orçamento é grátis e a resposta chega em minutos.</p>
-    <a href="https://wa.me/5541997411544?text=Ol%C3%A1%20Vertex%21%20Quero%20levar%20meu%20neg%C3%B3cio%20para%20o%20pr%C3%B3ximo%20n%C3%ADvel." target="_blank" rel="noopener" class="hov32" style="display:inline-flex;align-items:center;gap:11px;padding:17px 38px;border-radius:50px;font-weight:700;font-size:16.5px;background:linear-gradient(135deg,#2f6fe4,#5b5ff0);color:#fff;box-shadow:0 8px 38px rgba(63,111,228,0.45);transition:all .3s"><i class="fa-brands fa-whatsapp" style="font-size:19px"></i>Falar no WhatsApp</a>
+<!-- ============================================================ CTA -->
+<section class="cta" id="contato" data-reveal>
+  <div class="cta__glow" aria-hidden="true"></div>
+  <div class="cta__inner">
+    <h2>Vamos tirar seu site do papel?</h2>
+    <p class="lead">O orçamento é gratuito, sai sem compromisso, e a resposta costuma chegar em minutos.</p>
+    <div style="display:flex;gap:.8rem;flex-wrap:wrap;justify-content:center">
+      <a href="https://wa.me/5541997411544?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener" class="btn btn--primary">
+        <svg aria-hidden="true"><use href="#i-whatsapp"/></svg>Falar no WhatsApp
+      </a>
+      <a href="mailto:Vertex.page@outlook.com?subject=Or%C3%A7amento%20de%20site" class="btn btn--ghost">
+        <svg aria-hidden="true"><use href="#i-mail"/></svg>Prefiro por e-mail
+      </a>
+    </div>
   </div>
 </section>
 
-<footer style="border-top:1px solid rgba(255,255,255,0.06);padding:38px clamp(16px,4vw,32px);max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px">
-  <span style="display:flex;align-items:center;gap:9px;font-family:'Sora',sans-serif;font-weight:800;font-size:17px;color:#f2f5fb">Vertex</span>
-  <span style="display:flex;gap:22px;align-items:center;flex-wrap:wrap">
-    <a href="https://wa.me/5541997411544?text=Ol%C3%A1%20Vertex%21%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener" class="hov33" style="color:#8b94a7;font-size:13.5px;display:flex;align-items:center;gap:7px"><i class="fa-brands fa-whatsapp"></i>WhatsApp</a>
-    <a href="https://instagram.com/Vertexpage" target="_blank" rel="noopener" class="hov34" style="color:#8b94a7;font-size:13.5px;display:flex;align-items:center;gap:7px"><i class="fa-brands fa-instagram"></i>Instagram</a>
-    <a href="mailto:Vertex.page@outlook.com" class="hov35" style="color:#8b94a7;font-size:13.5px;display:flex;align-items:center;gap:7px"><i class="fa-solid fa-envelope"></i>Email</a>
-  </span>
-  <span style="width:100%;text-align:center;font-size:12px;color:#5f6a7e">© 2026 Vertex. Todos os direitos reservados.</span>
+</main>
+
+<!-- ============================================================ RODAPÉ -->
+<footer class="footer">
+  <a href="#hero" class="brand" aria-label="Vertex — voltar ao topo">
+    <svg aria-hidden="true"><use href="#i-mark"/></svg>
+    Vertex
+  </a>
+  <div class="footer__links">
+    <a href="https://wa.me/5541997411544?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-whatsapp"/></svg>WhatsApp</a>
+    <a href="https://instagram.com/Vertexpage" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-instagram"/></svg>Instagram</a>
+    <a href="mailto:Vertex.page@outlook.com"><svg aria-hidden="true"><use href="#i-mail"/></svg>E-mail</a>
+  </div>
+  <p class="footer__legal">
+    Vertex — criação de sites · Curitiba, PR · Atendimento em todo o Brasil<br>
+    © <span id="year">2026</span> Vertex. Site desenhado, animado e desenvolvido por Nicoly e Eduardo.
+  </p>
 </footer>
 
-<a href="https://wa.me/5541997411544?text=Ol%C3%A1%20Vertex%21%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener" aria-label="Fale conosco no WhatsApp" class="hov36" style="position:fixed;bottom:26px;right:26px;z-index:999;width:58px;height:58px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:27px;color:#fff;box-shadow:0 8px 30px rgba(37,211,102,0.45);transition:all .3s">
-  <span aria-hidden="true" style="position:absolute;inset:-8px;border-radius:50%;border:2px solid rgba(37,211,102,0.5);animation:vPulse 2s ease-out infinite"></span>
-  <i class="fa-brands fa-whatsapp"></i>
+<a href="https://wa.me/5541997411544?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener" class="wa-float" aria-label="Falar no WhatsApp">
+  <span class="wa-float__ring" aria-hidden="true"></span>
+  <svg aria-hidden="true"><use href="#i-whatsapp"/></svg>
 </a>
 
 <script>
 (function(){
+  'use strict';
+  document.body.classList.remove('no-js');
+
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- ano no rodapé ---------- */
+  var yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  /* ---------- nav ---------- */
   var nav = document.getElementById('siteNav');
-  function onScroll(){
-    var s = window.scrollY > 40;
-    nav.style.background = s ? 'rgba(7,9,16,0.85)' : 'transparent';
-    nav.style.backdropFilter = s ? 'blur(18px)' : 'none';
-    nav.style.webkitBackdropFilter = s ? 'blur(18px)' : 'none';
-    nav.style.borderBottom = s ? '1px solid rgba(255,255,255,0.07)' : '1px solid transparent';
-  }
-  window.addEventListener('scroll', onScroll, { passive: true });
+  function onScroll(){ nav.classList.toggle('is-stuck', window.scrollY > 40); }
+  window.addEventListener('scroll', onScroll, { passive:true });
   onScroll();
 
   var menuBtn = document.getElementById('menuToggle');
   var mobileMenu = document.getElementById('mobileMenu');
-  if (menuBtn && mobileMenu){
-    menuBtn.addEventListener('click', function(){
-      mobileMenu.classList.toggle('open');
-    });
-    document.querySelectorAll('.mobile-menu-link').forEach(function(el){
-      el.addEventListener('click', function(){ mobileMenu.classList.remove('open'); });
-    });
+  function setMenu(open){
+    mobileMenu.classList.toggle('is-open', open);
+    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    menuBtn.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
   }
+  menuBtn.addEventListener('click', function(){
+    setMenu(menuBtn.getAttribute('aria-expanded') !== 'true');
+  });
+  mobileMenu.addEventListener('click', function(e){
+    if (e.target.closest('a')) setMenu(false);
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape' && menuBtn.getAttribute('aria-expanded') === 'true'){
+      setMenu(false); menuBtn.focus();
+    }
+  });
 
-  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  var els = document.querySelectorAll('[data-reveal]');
-  if (!reduceMotion && 'IntersectionObserver' in window){
+  /* ---------- revelação ao rolar ---------- */
+  var reveals = document.querySelectorAll('[data-reveal]');
+  if (reduceMotion || !('IntersectionObserver' in window)){
+    reveals.forEach(function(el){ el.classList.add('is-in'); });
+  } else {
     var io = new IntersectionObserver(function(entries){
       entries.forEach(function(e){
-        if (e.isIntersecting){
-          e.target.style.opacity = '1';
-          e.target.style.transform = 'none';
-          io.unobserve(e.target);
-        }
+        if (e.isIntersecting){ e.target.classList.add('is-in'); io.unobserve(e.target); }
       });
-    }, { threshold: 0.08, rootMargin: '0px 0px -50px 0px' });
-    els.forEach(function(el){
-      var rect = el.getBoundingClientRect();
-      if (rect.top < window.innerHeight * 0.9) return;
-      el.style.opacity = '0';
-      el.style.transform = 'translateY(30px)';
-      el.style.transition = 'opacity .7s ease, transform .7s ease';
-      io.observe(el);
+    }, { threshold:0.06, rootMargin:'0px 0px -40px 0px' });
+    reveals.forEach(function(el){
+      if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add('is-in');
+      else io.observe(el);
     });
   }
 
-  var pc = document.getElementById('particles');
-  if (pc && !reduceMotion){
-    for (var i = 0; i < 26; i++){
-      var p = document.createElement('span');
-      var sz = (1 + Math.random() * 2.2).toFixed(1);
-      p.style.cssText = 'position:absolute;top:' + (Math.random() * 92) + '%;left:' + (Math.random() * 95) +
-        '%;width:' + sz + 'px;height:' + sz + 'px;border-radius:50%;background:#6ea8ff;opacity:' +
-        (0.15 + Math.random() * 0.45).toFixed(2) + ';animation:vFloat ' + (6 + Math.random() * 8).toFixed(1) +
-        's ease-in-out ' + (Math.random() * 6).toFixed(1) + 's infinite;';
-      pc.appendChild(p);
+  /* ---------- qualificador → mensagem de WhatsApp ---------- */
+  (function(){
+    var WA = 'https://wa.me/5541997411544';
+    var preview = document.getElementById('qzPreview');
+    var send = document.getElementById('qzSend');
+    if (!preview || !send) return;
+    var scope = document.getElementById('orcamento');
+
+    function listar(arr){
+      if (arr.length === 1) return arr[0];
+      return arr.slice(0, -1).join(', ') + ' e ' + arr[arr.length - 1];
     }
-  }
+
+    function montar(){
+      var tipo = scope.querySelector('input[name="qzTipo"]:checked');
+      var conteudo = scope.querySelector('input[name="qzConteudo"]:checked');
+      var nec = Array.prototype.map.call(
+        scope.querySelectorAll('input[name="qzNec"]:checked'),
+        function(i){ return i.value; }
+      );
+
+      if (!tipo && !conteudo && !nec.length) return '';
+
+      var t = 'Olá! Vim pelo site.';
+      if (tipo) t += ' Tenho ' + tipo.value + '.';
+      if (nec.length) t += ' Preciso de ' + listar(nec) + '.';
+      if (conteudo) t += ' Sobre o conteúdo: ' + conteudo.value + '.';
+      t += ' Pode me passar um orçamento?';
+      return t;
+    }
+
+    function atualizar(){
+      var msg = montar();
+      if (msg){
+        preview.textContent = msg;
+        send.href = WA + '?text=' + encodeURIComponent(msg);
+      } else {
+        preview.innerHTML = '<span class="qz__empty">Escolha as opções acima e sua mensagem aparece aqui, pronta para enviar.</span>';
+        send.href = WA;
+      }
+    }
+
+    scope.addEventListener('change', atualizar);
+    atualizar();
+  })();
+
+  /* ---------- marca em partículas ---------- */
+  (function(){
+    var cvs = document.getElementById('markCanvas');
+    var fallback = document.getElementById('markFallback');
+    if (!cvs) return;
+
+    var ctx = cvs.getContext && cvs.getContext('2d');
+    if (!ctx){                       /* navegador sem canvas: cai no SVG estático */
+      cvs.hidden = true;
+      if (fallback) fallback.hidden = false;
+      return;
+    }
+
+    var TONE = [[217,164,65],[150,110,46]];
+    var P = [], W = 0, H = 0, t0 = 0, raf = null, running = false;
+    var mx = -9999, my = -9999;
+
+    function shapeData(size){
+      var o = document.createElement('canvas');
+      o.width = o.height = size;
+      var c = o.getContext('2d'), k = size / 100;
+      c.fillStyle = 'rgb(217,164,65)';
+      c.beginPath();
+      c.moveTo(17*k, 16*k); c.lineTo(48.2*k, 45*k); c.lineTo(48.2*k, 83*k);
+      c.closePath(); c.fill();
+      c.fillStyle = 'rgb(150,110,46)';
+      c.beginPath();
+      c.moveTo(83*k, 16*k); c.lineTo(51.8*k, 45*k); c.lineTo(51.8*k, 83*k);
+      c.closePath(); c.fill();
+      return c.getImageData(0, 0, size, size).data;
+    }
+
+    function build(){
+      P.length = 0;
+      var size = Math.round(Math.min(W, H) * 0.78);
+      if (size < 40) return;
+      var d = shapeData(size);
+      var offX = (W - size) / 2, offY = (H - size) / 2;
+      var step = W < 480 ? 4 : 3;
+      var apexX = size * 0.5, apexY = size * 0.83, maxD = Math.hypot(size, size);
+
+      for (var y = 0; y < size; y += step){
+        for (var x = 0; x < size; x += step){
+          var i = (y * size + x) * 4;
+          if (d[i + 3] < 128) continue;
+          var ang = Math.random() * Math.PI * 2;
+          var rad = Math.max(W, H) * (0.5 + Math.random() * 0.75);
+          P.push({
+            tx: offX + x, ty: offY + y,
+            x: W/2 + Math.cos(ang) * rad, y: H/2 + Math.sin(ang) * rad,
+            vx: 0, vy: 0,
+            tone: d[i] > 190 ? 0 : 1,
+            delay: (Math.hypot(x - apexX, y - apexY) / maxD) * 640 + Math.random() * 240,
+            speed: 0.6 + Math.random() * 0.5
+          });
+        }
+      }
+    }
+
+    function sizeCanvas(){
+      var dpr = Math.min(window.devicePixelRatio || 1, 2);
+      W = cvs.clientWidth; H = cvs.clientHeight;
+      if (!W || !H) return false;
+      cvs.width = Math.round(W * dpr);
+      cvs.height = Math.round(H * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      return true;
+    }
+
+    function resize(){
+      if (!sizeCanvas()) return;
+      build();
+      t0 = performance.now();
+    }
+
+    /* Marca já montada, em um único desenho — sem loop, sem deslocamento. */
+    function drawAtRest(){
+      ctx.clearRect(0, 0, W, H);
+      for (var tone = 0; tone < 2; tone++){
+        ctx.fillStyle = 'rgb(' + TONE[tone][0] + ',' + TONE[tone][1] + ',' + TONE[tone][2] + ')';
+        for (var i = 0; i < P.length; i++){
+          var p = P[i];
+          if (p.tone !== tone) continue;
+          ctx.fillRect(p.tx - 0.9, p.ty - 0.9, 1.8, 1.8);
+        }
+      }
+    }
+
+    /* Devolve true enquanto a partícula ainda tem trabalho a fazer. */
+    function move(p, elapsed){
+      if (elapsed < p.delay) return true;
+      var dx = mx - p.x, dy = my - p.y, dist = Math.hypot(dx, dy);
+      if (dist < 75 && dist > 0.01){
+        var f = (1 - dist / 75) * 3.2;
+        p.vx -= (dx / dist) * f;
+        p.vy -= (dy / dist) * f;
+      }
+      p.vx = (p.vx + (p.tx - p.x) * 0.055 * p.speed) * 0.80;
+      p.vy = (p.vy + (p.ty - p.y) * 0.055 * p.speed) * 0.80;
+      p.x += p.vx; p.y += p.vy;
+      /* Só a velocidade decide. Medir distância até o alvo faria o loop girar
+         eternamente com o ponteiro parado sobre o canvas: ali a partícula fica
+         imóvel num equilíbrio deslocado, que é repouso legítimo. E como a mola
+         sempre puxa para o alvo, velocidade nula sem repulsão só acontece nele. */
+      return Math.abs(p.vx) + Math.abs(p.vy) > 0.06;
+    }
+
+    function frame(now){
+      if (!running) return;
+      var elapsed = now - t0, busy = false;
+      ctx.clearRect(0, 0, W, H);
+      for (var tone = 0; tone < 2; tone++){
+        ctx.fillStyle = 'rgb(' + TONE[tone][0] + ',' + TONE[tone][1] + ',' + TONE[tone][2] + ')';
+        for (var i = 0; i < P.length; i++){
+          var p = P[i];
+          if (p.tone !== tone) continue;
+          if (move(p, elapsed)) busy = true;
+          ctx.fillRect(p.x - 0.9, p.y - 0.9, 1.8, 1.8);
+        }
+      }
+      /* Marca assentada: para de desenhar até algo mexer com ela outra vez.
+         O último quadro permanece no canvas — é a logo em repouso. */
+      if (busy) raf = requestAnimationFrame(frame);
+      else { running = false; raf = null; }
+    }
+
+    function start(){
+      if (running || !P.length) return;
+      running = true;
+      raf = requestAnimationFrame(frame);
+    }
+
+    /* Movimento reduzido: a marca surge montada, com um fade curto. Sem voo de
+       partículas, sem reação ao ponteiro, sem requestAnimationFrame. */
+    if (reduceMotion){
+      cvs.classList.add('mark-fade');
+    } else {
+      cvs.addEventListener('pointermove', function(e){
+        var r = cvs.getBoundingClientRect();
+        mx = e.clientX - r.left; my = e.clientY - r.top;
+        start();
+      });
+      cvs.addEventListener('pointerleave', function(){ mx = -9999; my = -9999; start(); });
+    }
+
+    /* O canvas pode ainda não ter altura no instante em que este script roda.
+       Medir 0 ali fazia build() não gerar partícula nenhuma, e o hero ficava
+       vazio para sempre — sem erro no console. O ResizeObserver dispara assim
+       que existe layout e a cada mudança real de tamanho, o que de quebra
+       cobre girar o celular e a barra de endereço aparecendo e sumindo. */
+    var lastW = 0, lastH = 0, rt;
+
+    function init(){
+      var w = cvs.clientWidth, h = cvs.clientHeight;
+      if (!w || !h) return;                       /* layout ainda não existe */
+      if (w === lastW && h === lastH) return;     /* nada mudou: não remonta  */
+      lastW = w; lastH = h;
+      resize();
+      if (reduceMotion){
+        drawAtRest();
+        requestAnimationFrame(function(){ cvs.classList.add('is-in'); });
+      } else {
+        start();
+      }
+    }
+
+    if ('ResizeObserver' in window){
+      new ResizeObserver(function(){
+        clearTimeout(rt); rt = setTimeout(init, 120);
+      }).observe(cvs);
+    } else {
+      window.addEventListener('resize', function(){
+        clearTimeout(rt); rt = setTimeout(init, 180);
+      });
+    }
+    init();
+  })();
 })();
 </script>
 </body>
