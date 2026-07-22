@@ -5,8 +5,10 @@
 
 ## O negócio
 
-Vertex cria sites sob medida para restaurantes, hotéis e empresas, com base em Curitiba (PR)
-e atendimento a todo o Brasil. Nos bastidores a operação é de duas pessoas (design/animações
+Vertex cria sites sob medida para **pequenas e médias empresas de qualquer segmento**, com base
+em Curitiba (PR) e atendimento a todo o Brasil (remoto e, quando o projeto pede, visitas
+presenciais). Até jul/2026 o site era posicionado só para restaurantes/hotéis; o Eduardo pediu
+para abrir o foco para PMEs em geral e remover a linguagem específica desses nichos. Nos bastidores a operação é de duas pessoas (design/animações
 e desenvolvimento), mas **o site fala em voz de estúdio — "a Vertex", "nós" — sem nomear
 pessoas** (decisão do Eduardo, jul/2026, revertendo a diretriz anterior de plural nomeado).
 
@@ -38,9 +40,8 @@ Contatos: WhatsApp (41) 99741-1544 · Vertex.page@outlook.com · Instagram @Vert
 ## Identidade
 
 **Paleta** — Carvão quente `#0d0c0a` como base, latão `#d9a441` como único acento.
-Deliberadamente quente: o público é hotelaria e gastronomia, onde azul de tecnologia soa
-deslocado. A moldura é neutra de propósito, para que as maquetes coloridas dos estudos
-sejam o ponto focal — a casa é neutra, o trabalho é colorido.
+Deliberadamente quente: latão remete a artesanal e sob medida, distanciando do azul genérico
+de template de tecnologia. A moldura é neutra de propósito, para não competir com o conteúdo.
 
 **Tipografia** — Fraunces nos títulos (serifada, com caráter editorial), Inter no texto.
 
